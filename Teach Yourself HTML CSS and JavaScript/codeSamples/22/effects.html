@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <title>Testing script.aculo.us effects</title>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/prototype/1.7.2.0/prototype.js"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/scriptaculous/1.9.0/scriptaculous.js"></script>
+  </head>
+  <body>
+    <h1>Testing script.aculo.us Effects</h1>
+ 
+    <button onclick="new Effect.Fade($('testarea'))">Fade Out</button>
+
+    <button onclick="new Effect.Appear($('testarea'))">Fade In</button>
+
+    <button onclick="new Effect.SlideUp($('testarea'))">Slide Up</button>
+
+    <button onclick="new Effect.SlideDown($('testarea'))">Slide Down</button>
+
+    <button onclick="new Effect.Highlight($('testarea'))">Highlight</button>
+
+    <button onclick="new Effect.Shake($('testarea'))">Shake</button>
+
+    <hr/>
+
+    <h2>Testing Effects</h2>
+
+    <div id="testarea" style="background-color:#CCC; margin:20px; padding:10px;">
+    This section of the document is within a &lt;div&gt; element with the <strong>id</strong> value of <strong>testarea</strong>. The event handlers on the buttons above send this object to the <a href="http://script.aculo.us/">script.aculo.us</a> library to perform effects. Click the buttons to see the effects in action.    
+    </div>
+  </body>
+</html>

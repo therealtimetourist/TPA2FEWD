@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<title>Responsive Sticky Navigation</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+		<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+		<link rel="stylesheet" type="text/css" href="css/css.css">
+	</head>
+	<body>
+		<div class="wrapper">
+			<header>
+				<nav>
+					<div class="menu-icon">
+						<i class="fa fa-bars fa-2x"></i>
+					</div>
+					
+					<div class="logo">
+						LOGO
+					</div>
+					
+					<div class="menu">
+						<ul>
+							<li><a href="index.html">Home</a></li>
+							<li><a href="about.html">About</a></li>
+							<li><a href="portfolio.html">Portfolio</a></li>
+							<li><a href="contact.html">Contact</a></li>
+						</ul>
+					</div>
+				</nav>
+			</header>
+			
+			<div class="content">
+				<p>
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ultricies hendrerit erat a tempor. Donec congue dui vel dui vehicula commodo. Ut sed tellus eget nunc bibendum vulputate. Phasellus sollicitudin ullamcorper enim. Quisque imperdiet dictum cursus. Ut eu auctor mi. In a massa a nisi viverra rutrum. Ut dapibus sapien et mattis dapibus. Integer ac felis arcu. Integer accumsan mattis lorem, quis mattis erat finibus a. Suspendisse potenti. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aenean pellentesque, felis a feugiat lacinia, nisl augue rutrum erat, eget rhoncus lectus augue ullamcorper turpis.
+				</p>
+				
+				<p>
+					Suspendisse egestas euismod lectus at pharetra. Nulla semper molestie mattis. Nunc feugiat nunc nisl, et sagittis nulla aliquam in. Quisque sollicitudin libero at magna mollis, ut aliquet lacus fermentum. Pellentesque feugiat hendrerit cursus. Integer facilisis vulputate ipsum, nec venenatis nulla. Donec eu leo mattis, efficitur lorem in, accumsan dolor. Vestibulum eleifend, erat ut interdum lacinia, augue urna lobortis risus, dictum vulputate enim odio ac risus. In dignissim sagittis turpis nec porttitor. Praesent lacinia pulvinar enim. Maecenas sagittis eu felis eu cursus.
+				</p>
+				
+				<p>
+					Duis ultrices lacinia mi eget iaculis. In sollicitudin hendrerit risus, non finibus ligula molestie euismod. Praesent eu euismod neque. Sed euismod justo a massa suscipit, nec pretium arcu semper. Praesent ultricies elementum metus, dignissim sagittis mi accumsan eu. Sed malesuada dui quis vestibulum dignissim. Morbi massa ipsum, sodales sed leo id, tincidunt molestie felis. Aenean non tempus nisi. Etiam leo risus, auctor id ullamcorper in, pharetra a justo. Mauris fermentum risus sed rhoncus commodo.
+				</p>
+			</div>
+		</div>
+		
+		<script>
+			// -- menu toggle button --
+			$(document).ready(function(){
+				$('.menu-icon').on("click", function(){
+					$('nav ul').toggleClass('showing');
+				});
+			});
+			
+			// -- scrolling effect --
+			$(window).on("scroll", function(){
+				if($(window).scrollTop()){
+					$('nav').addClass('black');
+				} else{
+					$('nav').removeClass('black');
+				}
+			});
+			
+		</script>
+	</body>
+</html>
