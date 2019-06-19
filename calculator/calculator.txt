@@ -1,0 +1,17 @@
+JavaScript Calculator
+
+create the default html page code.
+create and connect the style sheet file
+create and connect the calc.js file
+add table with two rows one cell.
+add input fields to row 1.
+add numeric buttons to row 2. Add getNum() function skeleton to js file.
+add operator buttons to row 2. Add getOperator() function skeleton to js file.
+add clear screen button to row 2. Add clearScreen() function skeleton to js file.
+add backspace button to row 2. Add backspace() function skeleton to js file.
+add compute button to row 2. Add compute() function skeleton to js file.
+add brackets button to row 2. Add brackets() function skeleton to js file.
+
+style the calculator
+
+put meat on the js skeleton functions.

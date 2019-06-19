@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Simple Math Caculator</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <h1>Simple Math Caculator</h1>
+    <table>
+        <!-- Head of the calculator -->
+        <tr>
+            <td>
+                <input type="text" id="input" placeholder="0" readonly="readonly">
+                <input type="text" id="answer" readonly="readonly" style="color: #008040;">
+            </td>
+        </tr>
+        <!-- buttons -->
+        <tr>
+            <td>
+                <button onclick="clearScreen();">CE</button>
+                <button onclick="getOperator('/');">&#247;</button>
+                <button onclick="getOperator('*');">X</button>
+                <button onclick="backspace();" style="color: #ff0000;"><strong>&#8592;</strong></button>
+                <br>
+                <button onclick="getNum(1);">1</button>
+                <button onclick="getNum(2);">2</button>
+                <button onclick="getNum(3);">3</button>
+                <button onclick="getOperator('+');">+</button>
+                <br>
+                <button onclick="getNum(4);">4</button>
+                <button onclick="getNum(5);">5</button>
+                <button onclick="getNum(6);">6</button>
+                <button onclick="getOperator('-');">-</button>
+                <br>
+                <button onclick="getNum(7);">7</button>
+                <button onclick="getNum(8);">8</button>
+                <button onclick="getNum(9);">9</button>
+                <button onclick="brackets();">( )</button>
+                <br>
+                <button onclick="getOperator('+/-')">+/-</button>
+                <button onclick="getNum(0)">0</button>
+                <button onclick="compute();" style="width: 120px; background-color:#00ff00;">=</button>
+                <br>
+            </td>
+        </tr>
+    </table>
+    <script src="calc.js"></script>
+</body>
+</html>
