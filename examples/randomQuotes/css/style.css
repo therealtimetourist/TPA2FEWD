@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300&display=swap');
+
+body{
+    font: normal 18px/24px 'Open Sans Condensed', sans-serif;
+}
+
+.container{
+    width: 80%;
+    margin: 0 auto;
+}
+
+p.the-quote{
+    font-size: 2em;
+    line-height: 1.5em;
+}
+
+#quote{
+    float: left;
+    width: 50%;
+}
+
+#figure{
+    float: right;
+}
+
+img{
+    width: 400px;
+    overflow: hidden;
+}
