@@ -1,0 +1,167 @@
+﻿Q: Where does JavScript code run?
+1: Only on servers
+2: Only on clients, where it must run in a Web browser
+3: Most often in a Web browser, but it can also run in other places, such as servers or desktops
+4: In a virtual environment
+A: 3
+ 
+Q: What tools allow you to run JavaScript interactively in a browser?
+1: Browser development tools such as those in Chrome and Internet Explorer, or broser extensions such as Firebug
+2: Integrated development environments such as Eclipse
+3: Text editors such as Notepad, Textpad or NotePad++
+4: JavaScript must be run in a live browser environment only
+A: 1
+ 
+Q: One good reason to indent/format code is that:
+1: Human readers can compare relative indentation in source code easier
+2: The JavaScript interpreter expects all statements between braces to have the same indentation
+3: Equally indented lines of code execure quicker
+4: It just looks better
+A: 1
+ 
+Q: Which of these expressions does NOT evaluate to FALSE?
+1: NaN
+2: "zero"
+3: undefined
+4: null
+A: 2
+ 
+Q: Which of these loop types will always execute at least once?
+1: for
+2: while
+3: do
+4: 
+A: 3
+ 
+Q: Where is it generally accepted as good coding practice to incease the indentation of your source code?
+1: After opening a curly brace {
+2: After closing a curly brace }
+3: After a blank line
+4: After a comment
+A: 1
+ 
+Q: Which of the following expressions will return a random number between 0 (inclusive) and 100 (exclusive)?
+1: Math.random(100)
+2: 100 * Math.random()
+3: Math.random() / 100
+4: 
+A: 2
+ 
+Q: Which is the most common method of embedding JavaScript code in an HTML page?
+1: Via a <script> tag in the page head, using the src attribute to specify an external .js file
+2: Via a <script> tag in the page body, using the src attribute to specify an extrenal .js file
+3: Writing the JavaScript source between <script> and </script> tags in the page body
+4: Both A. and B.
+A: 4
+ 
+Q: To add a name to the end of the \"names\" array, which expression is used?
+1: names.push(\"Anne\");
+2: names.push[\"Anne\"];
+3: names.push(Anne);
+4: 
+A: 1
+ 
+Q: What is returned by the parseInt() function when applied to the string \"7thHeaven\"?
+1: null
+2: 7
+3: \"thHeaven\"
+4: 
+A: 2
+ 
+Q: For the string: var myString = \"Hello World\", what would be returned by the following expression: myString.charAt(6)
+1: It would return a value of \"W\"
+2: It would return a value of \" \" (blank space)
+3: 
+4: 
+A: 1
+ 
+Q: For the string: var myString = \"Hello World\", what would be returned by the following expression: myString.indexOf(\"w\"); 
+1: It would return a value of 6
+2: it would return a value of -1
+3: 
+4: 
+A: 2
+ 
+Q: Which of the following regular expression statements will replace all whitespace in a given string n with asterisks?
+1: n.replace(/s/g, "\*");
+2: n.replace(/\s/g, "\*");
+3: n.replace(\s/g, "\*");
+4: 
+A: 2
+ 
+Q: Which of these descriptions best applies to JavaScript?
+1: It is a purely functional language
+2: It is a purely object-oriented language
+3: It is a predominantly functional language with some added object-oriented features
+4: It is a predominantly object-oriented language with some added functional-language features
+A: 3
+ 
+Q: JavaScript functions can accept:
+1: No arguments
+2: Only one argument
+3: Any number of atguments
+4: 
+A: 3
+ 
+Q: Functions can also be returned from other functions. What is the correct syntax to return the function myFunc from another function?
+1: return(myFunc());
+2: return(myFunc);
+3: var f = myFunc(); return (f);
+4: 
+A: 2
+ 
+Q: Which of the following correctly defines an anonymous function, passing an argument of 8?
+1: (function{return (x + 2);})(8)
+2: (function(){return (x + 2);})(8)
+3: (function(x){return (x + 2);})(8)
+4: 
+A: 3
+ 
+Q: The apply directive is used to:
+1: Apply an argument to an array of functions
+2: Apply a function to an array of arguments
+3: Neither of the above
+4: 
+A: 2
+ 
+Q: Constructor functions in JavaScript usually, by convention, have:
+1: Names beginning with lower case letters
+2: Names beginning with upper case letters
+3: Names beginning with an underscore character
+4: 
+A: 2
+ 
+Q: JavaScript's prototype property:
+1: Allows you to add properties and methods to a class
+2: Allows you to add extra methods only to built-in classes
+3: Creates a new instance of a class
+4: 
+A: 1
+ 
+Q: Using namespaces is an important strategy that:
+1: Increases the execution speed of your code
+2: Helps to avoid naming conflicts when using other JavaScript files or libraries
+3: Increases the security of the code
+4: 
+A: 2
+ 
+Q: Anonymous objects are often used:
+1: Where you need many instances of the same object type
+2: Where an object has a large number of properties and methods
+3: Where objects are intended for one-time use
+4: 
+A: 3
+ 
+Q: When you are decoding JSON strings, for security and portability it is preferable to use (where possible):
+1: JSON.parse()
+2: eval()
+3: JSON.stringify()
+4: 
+A: 1
+
+Q: Which of these is NOT a value that might be returned by the typeof operator?
+1: "boolean"
+2: "undefined"
+3: "character"
+4: 
+A: 3

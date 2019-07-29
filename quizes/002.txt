@@ -1,0 +1,105 @@
+﻿Q: What JavaScript keyword is used to create an instance of an object?
+1: object
+2: new
+3: instance
+4: div
+A: 2
+ 
+Q: Which CSS style property and value are used to ensure that content does not appear to the left of a floating element?
+1: text-right
+2: text-left
+3: clear: right
+4: clear: left
+A: 4
+ 
+Q: What style sheet entry is used to place text within a <div> to appear 20 pixels from the top of the element?
+1: padding-bottom: 20px;
+2: <div><padding-top: 20px>
+3: padding-top: 20px
+4: <div><padding-below: 20px>
+A: 3
+ 
+Q: Which CSS style property controls the manner in which elements overlap each other?
+1: relative
+2: <div>
+3: float
+4: z-index
+A: 4
+ 
+Q: True or False: The list-style with a value of none still produces a structed list, either ordered or unordered.
+1: True
+2: False
+3: 
+4: 
+A: 1
+ 
+Q: What tool do you use to create and edit JavaScript programs?
+1: A browser
+2: A text editor
+3: A pencil and a piece of paper
+4: Microsoft Word
+A: 2
+ 
+Q: What are variables used for in JavaScript programs?
+1: Storing numbers, dates, or other values
+2: Varying randomly
+3: Store color data
+4: Store text
+A: 1
+ 
+Q: Using a debugger, how would you stop code execution on a specific line of code?
+1: Set a breakpoint
+2: Use the tag <stopdebug>
+3: Type <stop>
+4: You cannot do this with a debugger
+A: 1
+ 
+Q: True or False: You can position a fixed layput anywhere on the page.
+1: True
+2: False
+3: 
+4: 
+A: 1
+ 
+Q: The plus sign in the following code means what? document.write('This is a text string ' + 'that I have created');
+1: The (+) sign separates the lines
+2: The (+) sign joins two strings together
+3: The (+) sign creates a new line
+4: The (+) sign adds spaces
+A: 2
+ 
+Q: 
+1: 
+2: 
+3: 
+4: 
+A: 
+ 
+Q: 
+1: 
+2: 
+3: 
+4: 
+A: 
+ 
+Q: 
+1: 
+2: 
+3: 
+4: 
+A: 
+ 
+Q: 
+1: 
+2: 
+3: 
+4: 
+A: 
+ 
+Q: 
+1: 
+2: 
+3: 
+4: 
+A: 
+ 

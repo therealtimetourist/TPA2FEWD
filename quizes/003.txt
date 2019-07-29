@@ -1,0 +1,210 @@
+﻿Q: An HTML document beginning with the lines <!DOCTYPE html><html> is using what version of HTML?
+1: HTML 4
+2: XHTML
+3: HTML
+4: 
+A: 3
+ 
+Q: An HTML page has a section call summary. Which of the following hyperlinks will, when selected, take the user to the summary section from elsewhere in the same page?
+1: <a href="#summary">Summary</a>
+2: <a href="summary">#Summary</a>
+3: <a href="/summary">Summary</a>
+4: 
+A: 1
+ 
+Q: The page http://example.com/tests/test1.html contains a hyperlink with the attribute href="../answers/test1.html". To which URL will the link take a user?
+1: http://example.com/tests/answers/test1.html
+2: http://example.com/answers/test1.html
+3: http://example.com/test1.html
+4: 
+A: 2
+ 
+Q: The id attribute of an HTML element:
+1: Must have a value that is different from the ID of any other element on the page
+2: Must be a numeric value 
+3: Must have a value identical to the name of a CSS class defined for the page
+4: 
+A: 1
+ 
+Q: Heading elements <H1> through <H6>:
+1: Are rendered identaically in all browsers and cannot be styled via CSS
+2: Have their styles defined in the official HTML specification
+3: By default may display differently in different browsers, but can be styled via CSS
+4: 
+A: 3
+ 
+Q: Which HTML block element is particularly useful for displaying examples of computer source code?
+1: <div>
+2: <span>
+3: <pre>
+4: 
+A: 3
+ 
+Q: Which of the following statements best describes the relationship between <div> and <span> elements?
+1: <div> is a block element, whereas <span> is an inline element
+2: <span> is a block element, whereas <div> is an inline element
+3: <div> and <span> are both block elements
+4: <div> and <span> are both inline elements
+A: 1
+ 
+Q: What is the purpose of the type attribute for an ordered list (<ol>) element?
+1: To specify vertical or horizontal display for the list
+2: To specify how the item numbers should be displayed, e.g. via letters, Roman numerals, or numbers
+3: To specify whether the list should be displayed in forward or reverse order
+4: 
+A: 2
+ 
+Q: 
+1: 
+2: 
+3: 
+4: 
+A: 
+ 
+Q: 
+1: 
+2: 
+3: 
+4: 
+A: 
+ 
+Q: 
+1: 
+2: 
+3: 
+4: 
+A: 
+ 
+Q: 
+1: 
+2: 
+3: 
+4: 
+A: 
+ 
+Q: 
+1: 
+2: 
+3: 
+4: 
+A: 
+ 
+Q: 
+1: 
+2: 
+3: 
+4: 
+A: 
+ 
+Q: 
+1: 
+2: 
+3: 
+4: 
+A: 
+ 
+Q: 
+1: 
+2: 
+3: 
+4: 
+A: 
+ 
+Q: 
+1: 
+2: 
+3: 
+4: 
+A: 
+ 
+Q: 
+1: 
+2: 
+3: 
+4: 
+A: 
+ 
+Q: 
+1: 
+2: 
+3: 
+4: 
+A: 
+ 
+Q: 
+1: 
+2: 
+3: 
+4: 
+A: 
+ 
+Q: 
+1: 
+2: 
+3: 
+4: 
+A: 
+ 
+Q: 
+1: 
+2: 
+3: 
+4: 
+A: 
+ 
+Q: 
+1: 
+2: 
+3: 
+4: 
+A: 
+ 
+Q: 
+1: 
+2: 
+3: 
+4: 
+A: 
+ 
+Q: 
+1: 
+2: 
+3: 
+4: 
+A: 
+ 
+Q: 
+1: 
+2: 
+3: 
+4: 
+A: 
+ 
+Q: 
+1: 
+2: 
+3: 
+4: 
+A: 
+ 
+Q: 
+1: 
+2: 
+3: 
+4: 
+A: 
+ 
+Q: 
+1: 
+2: 
+3: 
+4: 
+A: 
+ 
+Q: 
+1: 
+2: 
+3: 
+4: 
+A: 
+ 
