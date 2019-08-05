@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Example | LocalStorage</title>
+    </head>
+    <body>
+
+        <div id="result"></div>
+
+        <script>
+            var resultDiv = document.getElementById("result");
+            // Check browser support
+            if (typeof (Storage) !== "undefined") {
+                // Store
+                localStorage.setItem("firstname", "Bob");
+                localStorage.setItem("middlename", "Peter");
+                localStorage.setItem("lastname", "Smith");
+                // Retrieve
+                var textResult = "First Name: " + localStorage.getItem("firstname") + "<br>";
+                textResult += "Middle Name: " + localStorage.getItem("middlename") + "<br>";
+                textResult += "Last Name: " + localStorage.getItem("lastname") + "<br>";
+                resultDiv.innerHTML = textResult;
+            } else {
+                resultDiv.innerHTML = "Sorry, your browser does not support Web Storage.";
+            }
+
+            // loop through all localStorage key pairs
+            //    var archive = {},
+            //        keys = Object.keys(localStorage),
+            //        i = keys.length;
+            //    console.log(i);
+            //    while (i--) {
+            //        archive[keys[i]] = localStorage.getItem(keys[i]);
+            //    }
+            //    Object.keys(archive).forEach(function (key) {
+            //        document.getElementById("result").innerHTML += key + ": " + archive[key] + "<br>";
+            //    });
+        </script>
+
+    </body>
+</html>
