@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Canvas Example</title>
+
+        <script>
+            function f1(){
+                var canvas = document.getElementById("smlRectangle");
+                context = canvas.getContext("2d");
+                context.fillStyle = "rgb(0, 0, 255)";
+                context.fillRect(10, 20, 200, 100);
+            }
+        </script>
+    </head>
+    <body onload="f1();">
+        <canvas id="smlRectangle" height="100" width="200"></canvas>
+    </body>
+</html>
