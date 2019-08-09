@@ -1,0 +1,279 @@
+Building the User Interface by Using HTML5: Organization, Input, and Validation Lesson 3
+
+Exam Objective Matrix
+Skills/Concepts MTA Exam Objectives 
+Choosing and Configuring  HTML5 Tags to Organize Content and Forms 
+Choose and configure HTML5 tags to organize content and forms. (2.4) 
+
+Choosing and Configuring  HTML5 Tags for Input and Validation 
+Choose and configure HTML5 tags for input and validation. (2.5)
+
+
+div Element 
+•Used for years to create structure of an HTML document 
+•Often includes a class or ID attribute 
+•May include CSS styles such as backgroundcolor, height, and width 
+•Example: – <div id="header" > This is a header </div>
+
+
+New HTML5 Elements for Structuring and Organizing Content 
+• header, footer, section, nav, article, and aside
+
+Semantic Markup 
+•Tag names that are intuitive 
+•Makes it easier to build and modify HTML documents 
+•Makes it easier for Web browsers and other programs to interpret 
+•Developers can still use <div> in HTML5 documents; should use new structure elements whenever appropriate
+
+header and footer Elements 
+•The header element defines a header for a document, section, or article. 
+HTML 4.01 uses the header div (<div id="header">). 
+•The footer element defines a footer for a document or section, and typically contains information about the document or section, such as the author name, copyright data, links to related documents, and so on.
+
+header and footer Elements (Continued) 
+•Can include multiple headers or footers in an HTML5 document
+
+header and footer Markup Example
+<code>
+
+section Element 
+•Defines a section in a document, such as a chapter, parts of a thesis, or parts of a Web page whose content is distinct from each other 
+•According to the W3C, must contain at least one heading and define something that would ordinarily appear in the document’s outline
+
+
+section Example
+<code>
+
+nav Element 
+•Defines a block of navigation links and is useful for creating 
+–A set of navigation links as a document’s primary navigation 
+–A table of contents 
+–Breadcrumbs in a footer 
+–Previous-Home-Next links
+
+nav Example
+<code>
+
+article Element 
+•Defines a part of an HTML document that consists of a “self-contained composition” independent from the rest of the content in the document 
+•Content set off by <article> tags can be distributed in syndication –Think of it as content that makes sense on its own
+
+aside Element 
+•Used for sidebars and notes—content that’s related to the current topic but would interrupt the flow of the document if left inline
+
+aside Example
+<code>
+
+HTML Tables 
+• <table> defines overall table 
+• <tr> defines rows 
+• <th> defines column headers 
+• <td> defines cells 
+• <caption> adds a caption above or below table 
+• <col> applies inline CSS styles 
+• Long, scrolling tables use <thead>, <tfoot>, and <tbody> tags
+
+HTML Table Example
+<code>
+
+HTML Table Example with Color
+<code>
+
+Ordered List 
+•Orders list entries using numbers, by default 
+•Uses the <ol> tag with attributes: 
+–reversed: Reverses the order of the list 
+–start number: Specifies the start value of the ordered list 
+–type: Specifies list item marker, such as "1" for displaying decimal numbers
+
+
+Ordered List Example
+<code>
+
+Unordered List 
+•Displays list entries in a bulleted list 
+•Uses a <ul> tag 
+•Round bullet symbol is the default marker for list items 
+•Can change bullet symbols 
+–For squares, add type="square" to the <ul> tag 
+–For empty circles, add type="circle"
+
+Unordered List Example
+<code>
+
+Forms and Input 
+• Form input is the information a user enters into fields in a Web or client application form. 
+• HTML5 introduces several new form and input element attributes; some are: 
+– url for entering a single Web address 
+– email for a single email address or a list of email addresses 
+– search to prompt users to enter text they want to search for
+
+Creating a Form 
+•Use the <form> start and end tags 
+•All form content and fields are between <form> tags 
+•Common syntax: <form id="keyword"> <content and fields> </form>
+
+Creating a Form (Continued)
+•The fieldset element is used with many forms to group related elements. 
+•The <fieldset> tag draws a box around individual elements and/or around the entire form.
+
+Form with Fieldset Example
+<code>
+
+Simple Form Example
+<code>
+
+Form required and email Attributes 
+•The required attribute requires information in a field when the form is submitted. 
+•The email attribute requires the user to enter an email address. 
+•Markup example: <input type="email" required />
+
+required Example
+<code>
+
+Form placeholder Attribute 
+•Placeholder text is text displayed inside an input field when the field is empty. 
+•It helps users understand the type of information they should enter or select. 
+•When you click on or tab to the input field and start typing, the newly entered text replaces the placeholder text. 
+•Markup example: <input name="fName" placeholder="First Name" />
+
+Form pattern Attribute 
+•The pattern attribute provides a format (a regular expression) for an input field, which is used to validate whatever is entered into the field. 
+•Markup example: <input type="text" id="empID" name="EmployeeID" required pattern="[A-Z]{2}[0-9]{4}" title="Employee ID is two capital letters followed by four digits">
+
+Form pattern Attribute (Continued) 
+•You can use the pattern attribute with these <input> types: 
+– text 
+– search 
+– url 
+– telephone 
+– email 
+– password
+
+Form autofocus Attribute 
+•The autofocus attribute moves the focus to a particular input field when a Web page loads. 
+•Markup example: <input type="text" name="fname" autofocus="autofocus" />
+
+Validation 
+• The process of verifying that information entered or captured in a form is in the correct format and usable before sending the data to the server 
+• Some things verified during validation: 
+–Required fields are empty 
+–Email addresses are valid 
+–Dates are valid 
+–Text does not appear in a numeric field or vice versa
+
+Validation (Continued) 
+•Automatic validation of input means the browser checks the data the user inputs. 
+–Also referred to as client-side validation 
+•Server-side validationoccurs when server validates data received from an input form
+
+Validation Example
+<code>
+
+Recap
+• div element 
+• Semantic markup 
+• header and footer elements 
+• section element 
+• nav element 
+• article element 
+• aside element 
+• HTML tables 
+• Ordered and unordered lists 
+• Forms and input 
+• Validation
+
+QUESTIONS
+1. An HTML __table__ contains rows and columns, and is used to display information in a grid format. 
+
+2. Class and ID are __global__ attributes, which means they can be used with any HTML element. 
+
+3. An __ordered__ list orders the list entries using numbers, by default. 
+
+4. An __unordered__ list displays list entries in a bulleted list. 
+
+5. The HTML5 __menu__ element presents a list (or menu) of commands, usually with buttons. 
+
+6. Form __input__ is the information a user enters into fields in a Web or client application. 
+
+7. The __required__ attribute requires information in a field when the form is submitted. 
+
+8. __Placeholder__ text is displayed inside an input field when the field is empty. It helps users understand the type of information they should enter or 
+select. 
+
+9. __Validation__ is the process of verifying that information entered or captured in a form is in the correct format and usable before sending the data to the server. 
+
+10. The __autofocus__ attribute moves the focus to a particular input field when a Web page loads. 
+
+MULIPLE CHOICE
+Which HTML5 element defines subdivisions in a document, such as chapters, parts of a thesis, or parts of a Web page whose content is distinct from each other?
+a. aside 
+*b. section 
+c. header 
+d. article 
+
+2. Which HTML5 element defines a part of an HTML document that consists of a “self-contained composition” that’s independent from the rest of the content in the document and may be syndicated?
+a. aside 
+b. section 
+c. header 
+*d. article 
+
+3. Which HTML5 element is used to set off content that’s related to the current topic but would interrupt the flow of the document if left inline?
+*a. aside 
+b. section 
+c. header 
+d. article 
+
+4. Which HTML5 attribute provides a format (a regular expression) for an input field, which is used to validate whatever is entered into the field?
+*a. pattern 
+b. autofocus 
+c. required 
+d. placeholder 
+
+5. Which of the following does validation not check and return an error for, by default, if invalid? 
+a. Required fields are empty 
+b. Valid email addresses 
+*c. Email address to the wrong recipient 
+d. Text in a numeric field or vice versa 
+
+6. Which of the following is a practical use for a Web form? 
+a. To collect contact information from a user 
+b. To capture user comments after an article on a Web site 
+*c. Both a and b 
+d. Neither a nor b 
+
+7. Which of the following are new form attributes in HTML5? (Choose all that apply.) 
+*a. autocomplete 
+b. target 
+c. method 
+*d. novalidate 
+
+8. What pattern attribute expression would you use to enter a product code that consists of three digits, separated by a hyphen, and then a single lowercase letter?
+a. [a-z]{1}-[0-9]{3} 
+*b. [0-9]{3}-[a-z]{1} 
+c. [A-Z]{3}-[0-9]{1} 
+d. [0-9]{1}-[a-z]{3} 
+
+9. Which of the following displays a key word or short phrase that describes the expected value of an input field, and then disappears when a user enters data?
+a. label 
+*b. placeholder 
+c. title 
+d. email 
+
+10. What is the format for the HTML5 tag that validates an email address? 
+a. <input label="email" name="URL">
+b. <form id="email"> 
+c. <label for="email">Email</label> 
+*d. <input type = "email" name = "email">
+
+ 
+True / False 
+T 1. In a table, the tfoot element must appear before the tbody element. 
+
+T 2. You can use numbers or letters for each item in an ordered list. 
+
+F 3. You can specify the height of an input element using the size attribute. 
+
+F 4. The label element displays the caption, or title, for a table. 
+
+T 5. The nav element defines a block of navigation links. 
