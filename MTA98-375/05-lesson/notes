@@ -1,0 +1,236 @@
+Understanding CSS Essentials: Layouts Lesson 5
+Exam Objective Matrix
+Skills/Concepts MTA Exam Objectives 
+Arranging User Interface (UI) Content by Using CSS 
+Arrange user interface (UI) content by using CSS. (3.2) 
+
+Using a Flexible Box to Establish Content Alignment, Direction, and Orientation 
+Arrange user interface (UI) content by using CSS. (3.2) 
+
+Using Grid Layouts to Establish Content Alignment, Direction, and Orientation 
+Arrange user interface (UI) content by using CSS. (3.2)
+
+User Interface (UI) Design 
+• User interface (UI)is the portion of a Web site or application with which a user interacts 
+• Can be simple, or complex with several sections, buttons, and controls 
+• Positioning and autosizing of UI elements central to good design 
+• Compare Bing.com to Microsoft.com – Look very different – Both follow the elements of good design—clean, easy to use, well-structured
+
+The Traditional CSS Box Model
+(Box Model Graphic)
+
+Block-level and Inline Elements 
+•A block-level elementcreates boxes that contribute to the layout of the document. 
+–Examples: Sections, articles, paragraphs, lists, and images 
+•Inline elementsare designed for laying out text and don’t disrupt the flow of the document. 
+–Examples: Applying boldface and the new HTML5 mark element
+
+Parent/Child Relationships 
+•A parent box can contain one or more child boxes. 
+•A child can inherit CSS styles from a parent.
+
+UI Challenges 
+• Developers have used float property for relative positioning of UI elements for years 
+–Doesn’t work for most mobile Web applications 
+• CSS3 Flexbox Box model ideal for items that should resize or reposition themselves 
+• CSS3 Grid Layout model good for complex layouts
+
+Vendor Prefixes 
+•CSS3 specification is still in draft format and undergoing modifications 
+•Need to use vendor prefixes with several CSS3 constructs 
+–Internet Explorer uses the -ms- prefix. 
+–Firefox supports the -moz- prefix. 
+–Opera supports the -o- prefix. 
+–Chrome and Safari support the -webkitprefix.
+
+CSS Flexbox Box Model 
+•Good for controls, toolbars, menus, and forms that resize and reposition automatically when the user changes the size of the browser window 
+•Browser takes the available space into account and calculates the dimensions for the user 
+•Enables relative sizes and positioning
+
+CSS Flexbox Box Model (Continued) 
+• Example: Parent flexbox indicated by shaded background, icons are child boxes 
+• When user increases screen size horizontally, the flexbox expands, distributing an even amount of space between the children
+Before: (graphic)
+After: (graphic)
+
+CSS Flexbox Box Model (Continued) 
+•Define an element as a flexbox using the CSS properties display:flexbox or display:inline-flexbox. 
+•The flexbox attribute sets the flexbox as a block-level element. 
+•The inline-flexbox attribute sets the flexbox as an inline-level element.
+
+CSS Flexbox Box Model (Continued) 
+•A box within a box is a child box, which can be flexible or not. A child box is referred to as a flexboxitem. 
+•The flex property controls the height and width of flexbox items. 
+•Whereas the display:flexbox property creates a flexible parent box, the flex property is what gives the flexible nature to child boxes.
+
+CSS Flexbox Box Model (Continued)
+A parent flexbox with three child boxes (flexbox items)
+Modifying the third child box to fill the available space
+
+Flexible Child Boxes Example
+
+Flexible Child Boxes Example
+The child boxes resized automatically along with the parent box
+
+flex-wrap Property 
+• The flex-wrap property determines whether child boxes automatically create a new line and wrap onto it.
+Illustrations: © MightyIsland/iStockphoto
+
+flex-pack and flex-align Properties 
+• The flex-pack property justifies the alignment of child boxes within a flexbox and minimizes whitespace in the parent box. 
+– Accepts one of four values: start, end, justify, or center 
+• The flex-align property sets the default alignment for child boxes, but with a twist. If the orientation of the parent box is horizontal, flex-align determines the vertical alignment of the child boxes, and vice versa.
+
+Changing Direction of Child Items 
+• The flex-direction property affects the direction of child boxes in the parent box. It uses the row, row-reverse, column, and column-reverse values. 
+• The flex-flow property sets the flexdirection and flex-wrap properties at the same time. 
+• The flex-order property controls the order and arrangement of child boxes in a flexbox by placing the child boxes in ordered groups.
+
+flex-order and flex-order Example flex-order and flex-order Example
+
+flex-order and flex-order Example flex-order and flex-order Example
+
+CSS3 Grid Layout Model 
+•Gives developers greater control over complex layouts than the flexbox model 
+•Lets you control the design of sections or entire HTML-based documents using CSS3 
+•Grid layouts use columns, rows, and cells, but you can move blocks of content from one part of page or application to another by moving code lines in CSS
+Grid Layout
+
+Newspaper Layout Example 
+
+Using a Grid Grid Layout CSS Properties 
+•CSS property of a grid layout creates container for the layout: 
+– display:grid 
+– display:inline-grid 
+•Grids also use grid-columns and grid-rows properties 
+•Child elements of a grid are called grid items
+
+Sizing and Positioning of Grid Items 
+•Grid tracks: The columns and rows of the grid; you define grid tracks using the gridrows and grid-columns properties 
+•Grid lines: The horizontal and vertical lines that divide columns or rows 
+•Grid cells: The logical space used to lay out grid items, similar to a cell in a spreadsheet
+
+Grid Layout Example
+
+Grid Layout Example Fixed vs. Fractional 
+•Can define columns and rows with a fixed size or a fractional size relative to the grid 
+•Fractional sizes defined using fr (short for “fraction”) 
+–A row defined as 2fr will be twice the size of a row defined as 1fr
+
+CSS Grid Template Layout Module 
+•Another approach to grid layouts 
+•Creates a grid template, which is like an empty table into which data can be flowed 
+•Template uses alphabetical characters to represent the position of items in a grid
+
+CSS Grid Template Layout Module 
+•Use grid-position property and assign an alphabetical character as a position value 
+•Example of grid-position property defined for four items: 
+news { grid-position: a; } 
+weather { grid-position: b; } 
+sports { grid-position: c; } 
+events { grid-position: d; }
+
+CSS Grid Template Layout Module 
+• After assigning positions, create layout using strings of characters 
+– A string equals a row 
+– Each character in string is a column 
+• Can use same values as used for grid-rows and grid-columns 
+• Example of grid with one row and four columns that size to fit content: 
+div { grid-template: "abcd"; grid-rows: auto; grid-columns: auto;}
+
+Recap 
+• UI design 
+• Traditional CSS Box model 
+• Block-level and inline element 
+• Parent/child relationships 
+• Vendor prefixes 
+• CSS Flexbox Box model 
+• CSS Grid Layout model 
+• CSS Grid Template Layout model
+
+Fill in the Blank 
+Complete the following sentences by writing the correct word or words in the blanks provided. 
+
+1. A __user interface, or UI,__ is the portion of a Web site or application with which a user interacts. 
+2. In the original W3C CSS box model, the __padding__ is the space between border and the content of the box. 
+3. In the W3C CSS box model, a _block_-level element creates boxes that contribute to the layout of the document. 
+4. Flexbox children are called _flexbox items_ and are laid out using the flexbox model. 
+5. Child elements of a grid are called __grid items__. 
+6. __Flexbox__ offers flexible layouts for UI design, mainly to create controls, toolbars, menus, and forms that resize and reposition automatically when the user changes the size of the browser window. 
+7. The __parent/child__ relationship describes how a parent box can contain one or more child boxes. 
+8. A __grid template__ is like an empty table into which data can be flowed. 
+9. An _inline_ element is designed for laying out text and doesn’t disrupt the flow of a document. Examples include boldface and the new HTML5 mark element.
+10. Where the flexbox model is suitable for simple things like buttons, toolbars, and many forms, you can use the _Grid Layout_ model for more complex layouts.
+ 
+Multiple Choice 
+Circle the letter that corresponds to the best answer. 
+
+1. The original W3C CSS Box model does not include which of the following? 
+a. margin 
+b. border 
+*c. toolbar 
+d. padding 
+
+2. Which of the following is best suited for buttons and toolbars? 
+*a. Flexbox Box model 
+b. CSS Box model 
+c. Grid Layout model 
+d. none of the above 
+
+3. You are using CSS to create a flexbox in an HTML document for work. Everyone at work uses the Internet Explorer Web browser. Which prefix should be used with the CSS property names to ensure compatibility while viewing the HTML document?
+a. -moz- 
+*b. -ms- 
+c. -webkit- 
+d. -o- 
+
+4. Which flexbox property makes child boxes flexible by height and width? 
+*a. flex 
+b. flex-child 
+c. flex-wrap 
+d. flex-align 
+
+5. You want to ensure that extra space in a browser window is distributed equally to the size of all child boxes in a flexbox. Which CSS property should be used? 
+a. flex-align 
+b. flex-wrap 
+c. flex-order 
+*d. flex-pack 
+
+6. Which flexbox property assigns child items to groups to control arrangement within a flexbox? 
+a. flex 
+b. flex-group 
+c. flex-direction 
+*d. flex-order 
+
+7. Which of the following places child items in a grid? 
+a. grid-columns 
+*b. grid-column 
+c. grid-flow 
+d. grid-pack 
+
+8. Which of the following enables you to adapt an HTML document to end-user devices? 
+*a. Media queries 
+b. The CSS Box model 
+c. The grid-template property 
+d. @import 
+
+9. Which of the following is the best use of a grid layout? 
+a. Menu 
+b. Toolbar 
+c. Footer 
+*d. Game interface 
+
+10. What is the primary purpose of a grid template? 
+a. To style a grid 
+*b. To create a table that will hold data
+c. To ensure your grid has equal numbers of columns and rows 
+d. none of the above 
+
+True / False 
+Circle T. if the statement is true or F if the statement is false. 
+
+F 1. A flexbox is defined by an element with the CSS properties display:boxflex or display:inline-boxflex. 
+T 2. A parent box can contain one or more child boxes. 
+F 3. You cannot reverse the order of child boxes within a flexbox. 
+F 4. A flexbox requires an outline or background color. 
+T 5. An appropriate use for a grid layout is for an online newspaper or a game. 

@@ -1,0 +1,220 @@
+Understanding CSS Essentials: Content Flow, Positioning, and Styling Lesson 4
+
+Exam Objective Matrix
+Skills/Concepts MTA Exam Objectives 
+Understanding CSS Essentials Understand the core CSS concepts. (3.1)
+
+Presentation vs. Content 
+• Content is the words and images in an HTML document. 
+• Presentation is related to styles and how words and images "look" in an HTML document. 
+• Content is managed as HTML and style as CSS. 
+• The separation of HTML and CSS generally means keeping CSS styles in a file separate from the HTML file.
+
+Web Page with and without CSS
+(Pic of two web pages; one w/o styling, one with styling)
+
+CSS 
+• CSS = Cascading Style Sheets 
+• CSS is a sequence of rules. 
+• CSS3 is the latest draft version; corresponds to HTML5 
+• CSS3 is that it’s backward compatible with previous versions of CSS
+
+The <link> Between HTML and CSS 
+• The <link> element in an HTML file links the HTML file to a CSS file. 
+• You can reference more than one CSS file in an HTML page.
+• Markup example: 
+	<link href = "filename.css" rel = "stylesheet" type = "text/css"> 
+• For simple projects, can use the <style> tag to include styles within an HTML document
+
+CSS Selector and Declaration 
+• The selector is usually the HTML element you want to style. 
+• The declaration is the style for a specific selector. 
+• A declaration has a property, which is a style attribute, and a value.
+p {color: brown;}
+Selector Declaration
+Property Value
+
+Styled Web Page Example: HTML File
+
+Styled Web Page Example: CSS File Styled Web Page Example: Rendered Page
+
+Font Basics 
+•A font is a set of characters of a particular size and style. 
+•Examples: 
+– Times New Roman 
+–Eras Bold ITC 
+– Myriad Web Pro 
+• Monospace is often used for technical material such as formulas, numbers, codes, and so on.
+
+Serif and Sans Serif Fonts
+d    p    t
+Serif Sans serif d    p    t
+
+Font Families 
+•The primary way to specify fonts in a CSS file is to use the font-family property. 
+•The property can declare a specific font, like Garamond or Arial, or a family that includes many different fonts, such as “serif.” 
+•Examples: –font-family: Arial –font-family: serif
+
+Web-safe Fonts 
+•Fonts most likely installed on a Web page visitor’s system 
+•List of Web-safe fonts is relatively short and doesn’t offer much variety
+
+@font-face Rule 
+• CSS3 rule that enables developers to use any font they choose 
+• Create a font-face rule by assigning a name to the font 
+• Font must be located on your Web server, or include a URL to font location 
+• Example: @font-face { font-family: TrustyHomePage; src: url('Euphemia.ttf'); }
+
+Inline Flow and Block Flow 
+•Inline flow fills only as much width as required 
+•Block flow fills as much width as is available
+
+Block Flow Example Block Flow Example
+
+Inline Flow Example 
+•Update the style section of the HTML file as follows:
+(code example)
+
+Inline Flow Example
+
+Float vs. Absolute Positioning 
+•Float positioning 
+	–Is useful when a layout is in columns, at least in part 
+	–To float an element is to have it move as far as possible either to the right or left 
+	–Text “wraps” around the element 
+•Absolute positioning –More exact and uses geometric placement
+
+Float Positing Example
+
+Float Positing Example 
+
+Absolute Positioning Example
+
+Absolute Positing Example 
+
+Bounding Box 
+•A bounding box is a rectangular border around content -- text, an image, or a shape -- that enables you to move, rotate, or scale the content of the box. •Bounding box can be visible or invisible.
+
+Overflow 
+•When an element overflows its bounding box, and its overflow is set to scroll, all the content of the element stays within the box; none of the overflow appears outside the box. This is referred to as scrolling overflow. 
+•Visible overflow writes over the content that follows it. 
+•Hidden overflow makes overflow invisible.
+
+Overflow 
+• overflow property 
+•Values: 
+	– Scroll 
+	– Visible 
+	– Hidden
+
+Scrolling Overflow Example 
+
+Scrolling Overflow Example
+
+Visible Overflow Example 
+
+Visible Overflow Example
+
+Visible overflow
+
+Hidden Overflow Example 
+
+Hidden Overflow Example
+
+Recap 
+• Presentation versus content 
+• CSS basics 
+	– The link between HTML and CSS 
+	– CSS selector and declaration 
+	– Fonts and font families 
+	– Web-safe fonts and @font-face rule 
+• Inline flow and block flow 
+• Float and absolute positioning 
+• Overflow
+
+Fill in the Blank 
+Complete the following sentences by writing the correct word or words in the blanks provided. 
+1. HTML has responsibility for content, and CSS for _style__. 
+2. An HTML source file refers to an external CSS source file with the __link__ element. 
+3. A CSS source file consists of zero or more individual _rules__. 
+4. An individual CSS rule has two parts: a __selector__ and one or more declarations. 
+5. An individual declaration within a CSS rule consists of a _property_, followed by a colon, then a value, and a semi-colon terminator. 
+6. The most common CSS selectors are: element or type, id, and __class__. 
+7. The two visible HTML content flows are __inline__ and block. 
+8. To make HTML elements appear in columns, it is common to apply __float__ positioning. 
+9. Suppose an element is subject to overflow: it might grow beyond the size allocated for it on the screen. To give it scrollbars which make it possible for an end user to see the entire element, declare the overflow property to have the __scroll__ value. 
+10. The most common values for the float property are _left_ and _right_.
+ 
+Multiple Choice 
+Circle the letter that corresponds to the best answer. 
+1. Which of the following best summarizes a useful pattern for commercial development? 
+a. Web pages are written in HTML 
+b. Designers need to learn Java or Ruby to layout displays 
+*c. CSS takes responsibility for visual style 
+d. CSS defines structure, and HTML assigns colors and fonts 
+
+2. Which of the following codes a comment within CSS? 
+a. <!-- ... --> 
+*	b. /* ... */ 
+c. # ... d. 
+d. // ... 
+
+3. How many different rules within a single valid CSS source file can declare the style of a paragraph <p> element? 
+a. 0 
+b. 1 
+c. 1 or 2, depending on whether HTML5 is used 
+*d. 0 or more 
+
+4. Sometimes colors are expressed with English words and sometimes they are expressed with symbolic numbers. Which of the following means “blue”? 
+a. 009 
+*b. #0000FF 
+c. !008000 
+d. (128, 128, 128) 
+
+5. A paragraph appears on an important display coded as “<p id = 'introduction'>Trusty Lawn Care takes . . .”. You’ve been told this paragraph must appear in the Tahoma font. Which of the following will best help you define an appropriate rule? 
+a. p {font: Tahoma;} 
+*b. #introduction {font-family: Tahoma;} 
+c. .introduction {font: Tahoma;} 
+d. .p {font-family: Tahoma;} 
+
+6. Someone has set up a Web page with HTML that links to three different CSS source files. The name of one of the source files is misspelled in the HTML. Which of the following is a Web browser most likely to display? 
+*a. It shows a display as though the link to the CSS with a misspelled name is simply missing. 
+b. It shows the misspelled name of the CSS source along with an error message. 
+c. It shows as much of the display as possible, using the last CSS correctly linked in place of the CSS with a misspelled name. 
+d. It displays a warning that the CSS can’t be found and asks whether you want to continue anyway. 
+
+7. The anchor tag <a > is the HTML element defined for definition of hyperlinks, among other things. Name the default content flow for an anchor. 
+*a. Inline 
+b. Block 
+c. Hidden 
+d. Visible 
+
+8. Your team is constructing an application that embeds a long license statement endusers must have a chance to read and approve. You want to limit the amount of space on the screen the license fills up, at the same time as you make every word of it available to end users who choose to read all of it. Which of the following is most likely to help you code this? 
+a. {position: scrolling;} 
+b. {fixed: scrolling;} 
+c. {overflow: scrolling;} 
+*d. {overflow: scroll;} 
+
+9. The latest CSS standard that is still under development but widely used is: 
+a. CSS8 
+b. CSS5 
+*c. CSS3 
+d. CSS2 
+
+10. When HTML links to CSS you have written, which is most likely to be a useful part of the link? 
+*a. type = 'text/css' 
+b. CSS = “SOME_NAME.css” 
+c. type = "style/CSS" 
+d. Web = "style/css"
+ 
+True / False 
+Circle T if the statement is true or F if the statement is false. 
+F 1. A CSS source file includes two different rules for the font of an h1 element. Your Web browser applies the rule one closer to the top of the source file, and ignores the one that appears closer to the bottom. 
+
+T 2. Overflow for a particular element is defined through CSS to scroll. There happens to be no overflow, because the content of the element is unusually short at the moment. Even in this case, the scrollbar is visible. 
+
+T 3. You’ve been asked to lay out a design with columns. Float positioning is more likely than absolute positioning to be useful for this situation. 
+
+F 4. If you use the latest CSS standard in your coding, end users who rely on old Web browsers will be warned that your pages present security risks. 
+
+F 5. Before you can test the CSS you write, you need to make sure a Python compiler is installed on your computer.

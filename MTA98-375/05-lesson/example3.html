@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Flex Function Example</title> 
+        <style>
+            div {
+                display: flexbox;
+                display: -ms-flexbox;
+                display: -moz-flexbox;
+                display: -o-flexbox;
+                display: -webkit-flexbox;
+                flex-wrap: wrap;
+                -ms-flex-wrap: wrap;
+                -moz-flex-wrap: wrap;
+                -o-flex-wrap: wrap;
+                -webkit-flex-wrap: wrap;
+                height: 200px;
+                padding: 1em;
+                color: white;
+                outline: 2px solid silver;
+            }
+            div > div {
+                width: 175px;
+                width: -ms-flex(1 75px);
+                width: -moz-flex(1 75px);
+                width: -o-flex(1 75px);
+                width: -webkit-flex(1 75px);
+                margin: 1em;
+                height: 100px;
+                background-color: #b200ff;
+                font-family: sans-serif;
+                text-align: center;
+                line-height: 100px;
+                font-size: xx-large;
+            } 
+        </style>
+    </head>
+    <body>
+        <div> 
+            <div>Service 1</div> 
+            <div>Service 2</div> 
+            <div>Service 3</div> 
+        </div> 
+    </body>
+</html>
