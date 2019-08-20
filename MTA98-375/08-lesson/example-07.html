@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Compute element</title>
+        <script type = "text/javascript">
+        // check_range assigns the display style   
+        // of the first paragraph as a function of   
+        // the displayed price—whether it’s 80 and   
+        // above, or 79 and below. 
+        function check_range() {
+            var value = document.getElementById("price1").value;
+            var paragraph_list = document.getElementsByTagName("p");
+            var first_paragraph = paragraph_list[0];
+            
+            if (value >= 80) {
+                display = "block";
+            } else {
+                display = "none";
+            }
+            
+            first_paragraph.style.display = display;
+        }
+        // compute_total() has the responsibility   
+        // to update the display with the total of   
+        // the price and its tax. 
+        function compute_total() {
+            var value = document.getElementById("price1").value;
+            
+            if (isNaN(value)) {
+                total = "INDETERMINATE";
+            } else {
+                // Assume an 8% tax.
+                total = 1.08 * value;
+                total = total.toFixed(2);
+            }     
+            
+            var total_slot = document.getElementById("total");
+            total_slot.innerHTML = total; 
+        } 
+        </script>
+    </head>
+    <body>
+        <h1>Compute element</h1> 
+        
+        <form> 
+            Enter a price: 
+            <input type = "number" id = "price1" min = "1" max = "100" oninput = "check_range(); compute_total();"></input>
+            The total price, including tax, is <span id = "total">INDETERMINATE</span>. 
+        </form> 
+        <p style = "display:none;">Warning: you are within 20% of your limit.</p>  
+    </body>
+</html>

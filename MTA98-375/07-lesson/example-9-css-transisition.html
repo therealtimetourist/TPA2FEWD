@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Transition Example</title>
+        <style type="text/css"> 
+        #wrapper { 
+            padding: 40px 40px;  
+            background: dodgerblue; 
+            width: 200px; 
+            font-family: sans-serif; 
+            font-size: xx-large; 
+            margin-left: auto; 
+            margin-right: auto; 
+            margin-top: 100px; 
+            color: #fff; 
+            cursor: pointer;
+
+            transition-property: opacity;
+            transition-duration: 1s;
+            transition-timing-function: linear; 
+
+            -ms-transition-property: opacity;
+            -ms-transition-duration: 1s;
+            -ms-transition-timing-function: linear;
+
+            -moz-transition-property: opacity;
+            -moz-transition-duration: 1s;
+            -moz-transition-timing-function: linear;
+
+            -webkit-transition-property: opacity;
+            -webkit-transition-duration: 3s;
+            -webkit-transition-timing-function: linear;
+
+            -o-transition-property: opacity;
+            -o-transition-duration: 1s;
+            -o-transition-timing-function: linear;
+        } 
+        #wrapper #front, #wrapper:hover #back { 
+            opacity:1; 
+            -ms-opacity: 1; 
+            -moz-opacity: 1; 
+            -o-opacity: 1; 
+            -webkit-opacity: 1;
+        }
+        #wrapper:hover #front, #wrapper #back { 
+            opacity: 0; 
+            -ms-opacity: 0; 
+            -moz-opacity: 0; 
+            -o-opacity: 0; 
+            -webkit-opacity: 0; 
+        }
+        </style>
+    </head>
+    <body>
+        <div id="wrapper">
+            <div id="front">Knock knock</div>
+            <div id="back">Who's there?</div>
+        </div>
+    </body>
+</html>

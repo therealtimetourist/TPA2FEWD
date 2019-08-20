@@ -1,0 +1,236 @@
+Managing Text Flow by Using CSS Lesson 6
+
+Exam Objective Matrix
+
+Skills/Concepts		MTA Exam Objectives 
+Managing the Flow of Text Content by Using CSS 
+Manage the flow of text content by using CSS. (3.3) 
+
+Understanding and Using Regions to Flow Text Content between Multiple Sections 
+Manage the flow of text content by using CSS. (3.3)
+
+A Web Layout with Columns
+Illustration: © Megan Tamaccio/iStockphoto
+Content flow
+
+CSS Regions 
+•Feature allows developers to dynamically flow content across multiple boxes, or containers, in HTML documents with fluid layouts 
+•Content adjusts and displays properly whether viewed on large or small
+
+Content Flow with CSS Regions
+1 2 3
+
+Non-contiguous Content Flow between Regions
+1 2
+
+CSS Regions Concepts 
+•Content source: One or more blocks of text in the same or a separate HTML document that holds the content you want to flow through a layout 
+•Content containers: Areas into which content is flowed 
+•Named flow: A set of elements taken from the source and to be flowed into a content container
+
+CSS Regions Concepts (Continued) 
+•Within content source, element that contains content to be flowed is assigned the flowinto CSS property 
+–Value of this property is named flow 
+• flow-from CSS property creates the content container, which is a CSS Region 
+–Value for this property must match the named flow value of the flow-into property
+
+CSS Regions Example CSS Regions Example
+
+CSS Regions Example: Resizing the Screen Reflows the Content 
+
+Overflowing Text 
+• region-overflow and overflow properties control how last region handles overflow content 
+• region-overflow is set to auto or break –auto value can specify overflow property as visible or hidden
+
+Overflow Example 
+•For overflow content to continue to flow and be visible: 
+.region { region-overflow:auto; overflow:visible; }
+
+Overflow Example
+
+Microsoft Implementation of CSS Regions 
+•Microsoft has own implementation of CSS Regions 
+•Uses iframes,which are like mini boxes on a Web page that contain external content embedded in an HTML document, as the content source 
+•Must use the -ms- vendor prefix with the flow-into and flow-from properties
+
+Microsoft Implementation of CSS Regions 
+•Example of iframe element with a unique ID (added to a master page): 
+<iframe id="main-data-source" src="source.html" /> 
+•Then create named flow using a CSS selector that specifies the data source: #main-data-source { -ms-flow-into: main; }
+
+Microsoft Implementation of CSS Regions 
+•To create content containers, assign class name to elements to use as containers: 
+<div class="region"></div> 
+<div class="region"></div> 
+•Then create a CSS selector that specifies the data source from which to accept the content flow: 
+.region { -ms-flow-from: main; }
+
+Multi-column Layout 
+•Create columns by dividing text across multiple columns 
+•Specify the amount of space that appears between columns (the gap) 
+•Make vertical lines (rules) appear between columns 
+•Define where columns break
+
+Multi-column Layout 
+• Main CSS properties for creating multiple columns in an HTML document: 
+– column-count: Sets the number of columns 
+•Alternative: Use columns property with columncount and column-width properties – column-gap: 
+Specifies the gapbetween the columns, known as the gutter or alley 
+– column-rule: Creates a vertical line in the gap between columns and sets the width, style (single or double line, solid, dashed, 3D, etc.) and color of the rule
+
+Multi-column Layout Example
+
+Multi-column Layout Example 
+
+Adding Column Rule and Adjusting Gap 
+• column-rule: 3px dashed blue; 
+• column-gap: 3em;
+
+Result of Resizing Browser Window 
+
+Hyphenation 
+• The process of connecting two words with a hyphen mark (-) or breaking words between syllables at the end of a line. 
+• CSS3 hyphens property controls hyphenation 
+• Values: 
+– auto: Enables automatic hyphenation of words based on line-break opportunities within words or by a "language-appropriate hyphenation resource" 
+– manual: Enables hyphenation of words based only on line-break opportunities within words 
+– none: Prevents hyphenation
+
+Language Declaration 
+•W3C requires a language declaration for correct automatic hyphenation to occur: 
+<!doctype html> <html lang="en-us"> or <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+Microsoft-specific Hyphenation Properties 
+• -ms-hyphenate-limit-zone: Specifies the width of the trailing whitespace (called the hyphenation zone) that can be left in a line before hyphenation occurs; the property’s value is a length in pixels or a percentage 
+• -ms-hyphenate-limit-chars: Specifies the minimum number of characters in a word that may be hyphenated; if the character count is lower than the minimum, the word is not hyphenated 
+• -ms-hyphenate-limit-lines: Specifies the maximum number of consecutive hyphenated lines that may contain hyphenated words
+
+Hyphenation Zone
+
+Hyphenation zone
+
+Microsoft Hyphenation Example
+
+CSS Exclusions 
+•Formerly referred to as positioned floats 
+•Enables positioning of images, text, and boxes anywhere in an HTML document and wrapping of text completely around these elements 
+•Can control the position of a float precisely, at a specified distance from the top, bottom, left, or right sides of a container
+
+CSS Exclusions Example 1
+Screen shot from Internet Explorer 10 Test Drive Web page
+
+CSS Exclusions Properties 
+• wrap-flow:both displays content on all sides of the exclusion 
+• wrap-flow:clear displays content above and below the exclusion but leaves the sides blank 
+• shape-inside and shape-outside define the content and the general shape of an exclusion, respectively 
+• -ms- vendor prefix required for Internet Explorer 10; Exclusions not supported in Internet Explorer 9
+
+CSS Exclusions Example 2
+
+Recap 
+• General Web layout with columns 
+• CSS Regions – Content flow with CSS Regions – Overflowing text 
+• Microsoft implementation of CSS Regions 
+• Multi-column layout 
+• Hyphenation 
+– Microsoft-specific hyphenation properties 
+• CSS Exclusions
+
+Fill in the Blank 
+Complete the following sentences by writing the correct word or words in the blanks provided. 
+
+1. _CSS Regions_ are defined areas of an HTML document where content can flow. They’re used instead of multiple columns in more complex layouts. 
+
+2. CSS3 properties for _multi-column layout_ let you create columns by dividing text across multiple columns, specify the amount of space that appears between columns (the gap), make vertical lines (rules) appear between columns, and define where columns break. 
+
+3. A __content source__ may be one or more blocks of text in the same or a separate HTML document that holds the content you want to flow through a CSS Regions layout. 
+
+4. __Content containers__ are the part of CSS Regions into which content is flowed. 
+
+5. __Hyphenation__ is the process of connecting two words with a hyphen mark (-) or breaking words between syllables at the end of a line. 
+
+6. A __CSS Exclusion__ is a positioned float that enables you to position images, text, and boxes anywhere in an HTML document and then wrap text completely around these elements. 
+
+7. The __flow-from__ CSS property creates a content container for CSS Regions. 
+
+8. The __flow-into__ CSS property identifies the content source for CSS Regions. 
+
+9. A(n) __iframe__ is a mini HTML document embedded in an HTML document. 
+
+10. The value of the flow-into property is called a __named flow__. 
+
+Multiple Choice 
+Circle the letter that corresponds to the best answer. 
+
+1. You are creating a CSS Regions content source named “main.” Which of the following is the correct syntax? 
+a. flow-from: main 
+b. flow-into: main 
+c. main: flow-into 
+d. main: flow-from 
+
+2. You are creating a CSS Regions content container to be associated with a content source named “main.” Which of the following is the correct syntax? 
+a. flow-from: main 
+b. flow-into: main 
+c. main: flow-into 
+d. main: flow-from 
+
+3. What are the options for handling overflow text in the last container of a CSS region? (Choose all that apply.) 
+a. Truncation
+b. Continue overflowing and be visible 
+c. Continue overflowing but be hidden 
+d. Duplication 
+
+4. How does Microsoft’s implementation of CSS Regions differ from the W3C’s specification? 
+a. Microsoft uses the flow-into property. 
+b. Microsoft uses the flow-from property. 
+c. Microsoft does not use iframes. 
+d. Microsoft uses iframes. 
+
+5. Which CSS3 property creates scalable columns? 
+a. column-count 
+b. add-columns 
+c. wrap-columns 
+d. none of the above 
+
+6. Which CSS3 property creates a line between columns in a multi-column layout? 
+a. break-inside 
+b. column-fill 
+c. column-gap 
+d. column-rule 
+
+7. Which of the following is not a legal value for the CSS3 hyphens property? 
+a. none 
+b. lines 
+c. manual 
+d. auto 
+
+8. Which of the following specifies the width of the trailing whitespace that can be left in a line before hyphenation occurs? 
+a. -ms-hyphenate-limit-chars 
+b. -ms-hyphenate-limit-lines 
+c. -ms-hyphenate-limit-zone 
+d. none of the above 
+
+9. Which of the following is the formerly used term for CSS Exclusions? 
+a. left/right floats 
+b. positioned floats 
+c. shape changer 
+d. the DOM 
+
+10. Which CSS3 property creates a CSS exclusion? 
+a. wrap-flow 
+b. flow-wrapper 
+c. shape-wrapper 
+d. wrapper-shape
+ 
+True / False 
+Circle T if the statement is true or F if the statement is false. 
+
+T F 1. A CSS Exclusion must be either rectangular or circular in shape. 
+
+T F 2. You must declare a language using the HTML lang or XML xml:lang attributes for correct automatic hyphenation to occur. 
+
+T F 3. You can center a heading across multiple columns using the columnspan: all property. 
+
+T F 4. You combine CSS Regions with CSS layout techniques, such as columns, flexboxes, and grid layouts. 
+
+T F 5. In CSS Regions, the value for the flow-from property must match the value of the flow-into property.

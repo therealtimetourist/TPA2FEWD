@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>SVG Filters Offset Example</title>
+    </head>
+    <body>
+        <svg> 
+            <defs> 
+                <filter id="i1" x="0" y="0"> 
+                <feOffset dx="5" dy="5" /> 
+                </filter> 
+            </defs> 
+            <rect width="150" height="150" fill="grey" filter="url(#i1)" /> 
+            <rect width="150" height="150" fill="plum" /> 
+        </svg>
+    </body>
+</html>
+

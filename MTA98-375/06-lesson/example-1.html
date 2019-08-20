@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>CSS Region Example</title>
+        <style type="text/css">
+            body, html { height:100%; width:100%; }
+            body{ font-family: serif; color: black; font-size: large; }
+            #source{ -webkit-flow-into: main; }
+            .region{ -webkit-flow-from: main; margin: 0 25px 0 0; background: #EEE8AA; padding: 20px; }
+            #region1{ width: 20%; height: 50%; float: left; }
+            #region2{ width: 20%; height: 50%; float: left; }
+            #workarea{ position: relative; padding: 25px; }
+        </style>
+    </head>
+    <body>
+        <div id="source">
+            <p>
+                Praesent sodales vulputate diam vel eleifend. Suspendisse porta varius eros, at ultrices justo pharetra eget. 
+                Mauris quis molestie velit, bibendum porttitor magna. Suspendisse fringilla ultrices molestie. Proin malesuada 
+                purus at dui egestas, convallis laoreet neque porta. Donec efficitur sapien sed nunc placerat ornare. Duis sed 
+                sollicitudin sapien. Quisque lorem nisi, vulputate ac imperdiet sit amet, aliquam eget sapien.
+            </p>
+        </div>
+        <div id="workarea">
+            <div id="region1" class="region"></div>
+            <div id="region2" class="region"></div>
+            <div id="region3" class="region"></div>
+        </div>
+        
+    </body>
+</html>

@@ -1,0 +1,313 @@
+Managing the Graphical Interface by Using CSS Lesson 7
+
+Exam Objective Matrix
+
+Skills/Concepts MTA Exam Objectives 
+Managing the Graphical Interface with CSS 
+Manage the graphical interface by using CSS (3.4)
+
+border-radius Property 
+•Creates rounded corners around layout elements, like headers, footers, sidebars, graphics boxes, and outlines around images 
+• border-radius is a length, which is usually expressed in pixels or ems but can be a percentage
+
+border-radius Example
+
+border-radius Example 
+
+border-radius Property, Single Corners 
+•Rounding a single corner of a box: 
+– border-top-left-radius 
+– border-top-right-radius 
+– border-bottom-right-radius 
+– border-bottom-left-radius
+
+box-shadow Property 
+•Creates drop shadows around layout elements 
+•CSS syntax for creating a shadow: box-shadow: h-shadow v-shadow blur spread color inset; 
+•Required: h-shadow and v-shadow attributes set the horizontal and vertical position of the shadow in relation to the box 
+•Optional: blur, spread, color, and inset
+
+box-shadow Example
+
+Opacity and Transparency 
+•An opaque item does not let light pass through, whereas you can see through a transparentitem. 
+•Syntax for applying a transparency to an image or other element: opacity: value 
+•Value is a floating-point value between 0.0 (100% transparent) and 1.0 (100% opaque)
+
+Transparency Example
+Original With transparency
+Photo: © AVTG/iStockphoto
+
+CSS Gradients 
+•Gradient is a smooth change of colors, within the same hue or starting with one color and ending with a different color 
+•Used for subtle shading within backgrounds, button embellishments, and more 
+•Created as methods to the CSS background property
+
+CSS Gradient Methods 
+• CSS3 gradient methods: 
+– linear-gradient: Creates a gradient from top to bottom or vice versa, or from corner to corner 
+– radial-gradient: Creates a gradient that radiates out from a central point 
+– repeating-linear-gradient: Creates a repeating linear gradient, which results in straight bands of gradient color 
+– repeating-radial-gradient: Creates a repeating radial gradient, which results in circular bands of gradient color
+
+Gradient Examples
+Radial gradient:radial-gradient(50% 50%, 70% 70%, #99CCFF, #3D5266);
+Linear gradient: background: lineargradient(black, white);
+
+Color Interpolation and Color Stops 
+•CSS gradients support color interpolation in the alpha color space 
+–Part of the red blue green alpha (RGBA) color model 
+•Can specify multiple color stops, with an RGBA color and position for each one 
+•Example of the use of rgba colors: linear-gradient(to right, rgba(255,255,255,0)
+
+CSS Font-related Properties 
+• font-family specifies the font for an element 
+• font-size specifies the size of a font 
+• font-style specifies the style of a font, such as normal italics, or oblique 
+• font-variant specifies whether text should be displayed in small caps 
+• font-weight specifies the thickness of font characters
+
+Web-safe Fonts 
+•A set of standard fonts typically located on a user’s computer and that generally render consistently in the majority of browsers 
+•Not appropriate for brand identity for many companies 
+•Limited choices
+
+Web Open Font Format (WOFF) 
+•Allows developers to use almost any font 
+•Are compressed True Type, OpenType, or Open Font Format fonts that contain additional metadata 
+•Are usually hosted on a server; CSS references font and server or URL
+
+Web Open Font Format (WOFF) 
+•To use a WOFF font from a font vendor’s site, for example, include the @font-face rule in CSS: 
+<style> @font-face { font-family: "font-family-name"; src: url("http://website/fonts/fontfile") } </style>
+
+2D and 3D Transformations 
+• A transformis an effect that lets you change the size, shape, and position of an element. 
+• Transformations use the transform property. 
+–Methods: matrix, perspective, rotate, scale, skew, translate 
+• To see the “action” of a transformation requires JavaScript; using only CSS shows the before and after effects of properties and their values.
+
+2D Translation 
+• To translatean element means to move it without rotating, skewing, or otherwise turning the image. 
+• Use the translate() method in CSS and provide x- and y-axis values to position the element relative to its original or default position. 
+–x-axis value specifies the left position of the element 
+–y-axis value specifies the top position.
+
+2D Translation Example 2D Translation Example
+
+2D Scaling 
+•To scale an element is to increase or decrease its size. 
+•Use the scale() method in CSS and provide x-axis (width) and y-axis (height) values. 
+•The example on the following two slides increases the width of the element two times its original size, and increases the height four times its original size: transform: scale(2,4);
+
+2D Scaling Example
+
+2D Scaling Example 2D Rotation 
+•To rotatean element turns it clockwise by a specified number of degrees. 
+•Use the rotate() method in CSS and specify the degrees of rotation. 
+•The example on the following two slides rotates an element by 30 degrees in the 2D plane: transform: rotate(30deg);
+
+2D Rotation Example 
+
+2D Example
+
+3D Rotation 
+•3D rotation uses the rotateX() and rotateY() methods. 
+– rotateX(): Element rotates around its x-axis 
+– rotateY(): Element rotates around its yaxis
+
+2D Skewing 
+•To skewan element is to stretch it in one or more directions. 
+•Use the skew() method and provide x-axis and y-axis values, in degrees, to create an angular shape. 
+•The example on the following two slides turns an element 20 degrees around the xaxis and 30 degrees around the y-axis: transform: skew(20deg,30deg);
+
+2D Skewing Example 2D Skewing Example
+
+3D Skewing 
+•3D skewing uses the skewX() and skewY() methods to skew an element around its xaxis and y-axis, respectively. 
+•As an example, the following code skews an element 45 degrees: transform: skewX(45deg);
+
+3D Perspective 
+•The CSS3 3D perspective property defines how a browser renders the depth of a 3D transformed element. 
+•The property takes on a number value: lower values (in the range of 1 to 1000) create a more pronounced effect than higher values.
+
+Transition 
+•A transitionis a change from one thing to another; in CSS, a transition is the change in an element from one style to another. 
+•In CSS3, the action of a transition renders onscreen—no JavaScript is needed! 
+•The transition property requires the CSS property to be acted upon during the transition.
+
+Transition Example
+
+Transition Example
+
+Animation 
+• An animationis the display of a sequence of static images at a fast enough speed to create the illusion of movement. 
+• Transitions and animations are similar in that they both use timings. 
+• Many properties used in animations are similar to transitions. 
+• An important difference is that animations use keyframes, which give you control over parts of the animation.
+
+Animation (Continued) 
+•Specify a CSS style within the @keyframes rule 
+•An example of a rule for a fadeout: @keyframes fadeout { from { opacity: 1; } to { opacity: 0; } }
+
+Animation (Continued) 
+•Code snippet that configures animation properties for a fadeout: 
+div { animation-duration: 3s; 
+animation-delay: 0s; 
+animation-timing-function: ease; } 
+div:hover { animation-name: fadeout; }
+
+SVG Filters 
+•An SVG filteris a set of operations that use CSS to style or otherwise modify an SVG graphic. 
+•The enhanced graphic is displayed in a browser while the original graphic is left alone.
+
+SVG Filters 
+• feBlend 
+• feColorMatrix 
+• feComponentTransfer 
+• feComposite 
+• feConvolveMatrix 
+• feDiffuseLighting 
+• feDisplacementMap 
+• feFlood 
+• feGaussianBlur 
+• feImage
+• feMerge 
+• feMorphology 
+• feOffset 
+• feTile 
+• feTurbulence 
+• feDistantLight 
+• fePointLight 
+• feSpecularLighting 
+• feSpotLight
+
+SVG Filters Gaussian Blur Example SVG Filters Offset Example
+
+Canvas 
+•Use canvas to draw pixel-based shapes. 
+•The canvas element accepts only two attributes—height and width. 
+•You can use most CSS properties to style the canvas element, adding color, gradients, pattern fills, transformation, animation, and much more.
+
+Canvas Example 1
+
+Canvas Example 2 
+• context.rotate(20*Math. PI/180);
+
+Canvas Example 3
+
+Recap 
+• Graphics effects 
+• Transparency and opacity 
+• Background gradients 
+• Web-safe fonts and the Web Open Font Format 
+• 2D and 3D transformations – Translation – Scaling – Rotation – Skewing – 3D perspective 
+• Transitions and animations 
+• SVG filters 
+• Canvas
+
+Fill in the Blank 
+Complete the following sentences by writing the correct word or words in the blanks provided. 
+
+1. A __gradient__ is a smooth change of colors, either within the same hue or starting with one color and ending with another. 
+
+2. To __scale__ an element is to increase or decrease its size. 
+
+3. A __drop shadow__ is a visual effect in which an object is repeated behind and moved slightly below itself to create the illusion that the object floats over its background. 
+
+4. A __transition _ is a change from one thing to another; in CSS, it is the change in an element from one style to another. 
+
+5. The __Web Open Font Format (WOFF)_ enables Web developers to use custom fonts—pretty much any font—instead of being limited to the standard Web fonts. 
+
+6. The __border-radius__ CSS3 property enables you to create rounded corners around layout elements, such as headers, footers, sidebars, graphics boxes, and outlines around images. 
+
+7. __Transparency__ is reduced opacity. 
+
+8. To __translate__ an element means to move it, without rotating, skewing, or otherwise turning the image. 
+
+9. In HTML5/CSS3, a __transform__ is an effect that lets you change the size, shape, and position of an element. 
+
+10. An SVG __filter__ is a set of operations that use CSS to style or otherwise modify an SVG graphic. 
+
+
+Multiple Choice 
+Circle the letter that corresponds to the best answer. 
+
+1. Which of the following creates a gradient from top to bottom, left to right, or from corner to corner, without reiterating colors? 
+*a. linear-gradient 
+b. radial-gradient 
+c. repeating-linear-gradient 
+d. repeating-radial-gradient 
+
+2. Which of the following is not true of the border-radius property? 
+a. It creates rounded corners around layout elements. 
+b. It can be expressed in pixels. 
+c. It can be expressed as a percentage. 
+*d. It can animate an object. 
+
+3. To apply a 60% transparency to an image or element, which property do you use? 
+a. opacity: 40 
+*b. opacity: 0.4 
+c. transparency: 40 
+d. transparency: 0.4 
+
+4. Which of the following are disadvantages of Web-safe fonts? (Choose all that apply.) 
+a. They must be loaded on a Web server. 
+*b. They are limited in number and variety. 
+*c. They make brand identity difficult to achieve on the Web. 
+d. They are expensive. 
+
+5. Keyframes are associated with which of the following? 
+a. Rounded corners 
+b. Transitions 
+*c. Animations 
+d. None of the above 
+
+6. When creating a transition, which of the following must be specified? 
+a. A start delay 
+*b. The CSS property to be acted upon during the transition 
+c. The transition timing function 
+d. The keyframe 
+
+7. What is a primary advantage to using color interpolation in the alpha color space? 
+*a. It produces smoother color transitions in gradients. 
+b. It enables you to add color to SVG drawings. 
+c. Both a and b 
+d. Neither a nor b 
+
+8. Which of the following do you use to add color to canvas text? 
+*a. fillStyle 
+b. strokeStyle 
+c. textColor 
+d. strokeColor 
+
+9. What are the two play states of an animation? 
+a. started 
+*b. running 
+*c. paused 
+d. resumed 
+
+10. In the following code sample, what controls the amount of blur? 
+<defs> 
+  <filter id="a1" x="0" y="0">
+    <feGaussianBlur in="SourceGraphic" stdDeviation="20" /> 
+  </filter>
+</defs> 
+
+a. feGaussianBlur 
+b. SourceGraphic 
+*c. stdDeviation 
+d. none of the above
+ 
+True / False 
+Circle T if the statement is true or F if the statement is false. 
+
+T 1. An opaque item does not let light pass through, whereas you can see through a transparent item. 
+
+F 2. In CSS, to rotate an element turns it counterclockwise by a specified number of degrees. 
+
+T 3. An animation is the display of a sequence of static images at a fast enough speed to create the illusion of movement. 
+
+T 4. Radial gradients start from a central point and radiate color out to the edges of a container. 
+
+T 5. Perspective, in terms of drawings and illustrations, is the convergence of lines that give the illusion of depth.

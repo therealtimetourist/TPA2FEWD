@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Perspective and Rotation Example</title>
+        <style type="text/css"> 
+            #wrapper { 
+                transition-property: opacity; 
+                transition-duration: 3s; 
+                transition-delay: 1s; 
+                transition-timing-function: linear; 
+            } 
+            #wrapper #before, #wrapper:hover #after {  
+              opacity: 1; 
+            } 
+            #wrapper:hover #before, #wrapper #after {  
+              opacity: 0; 
+            } 
+        </style>
+    </head>
+    <body>
+        <div id="wrapper"> 
+            <div id="before">Now you see me</div> 
+            <div id="after">Now you don't</div> 
+        </div>
+    </body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Perspective and Rotation Example</title>
+        <style type="text/css">  
+            div { 
+                padding: 40px 40px;  
+                background: #B8860B; 
+                width: 150px; 
+                color: #fff; 
+                font-family: sans-serif; 
+                font-size: xx-large; 
+            } 
+            div#div2 {         
+                margin: 100px; 
+                perspective: 600; margin: 100px 0 0 50px; 
+                -ms-perspective: 600; margin: 100px 0 0 50px; 
+                -moz-perspective: 600; margin: 100px 0 0 50px; 
+                -o-perspective: 600; margin: 100px 0 0 50px; 
+                -webkit-perspective: 600; margin: 100px 0 0 50px; 
+                
+                transform: rotate3d(0, 1, 1, 45deg);  
+                -ms-transform: rotate3d(0, 1, 1, 45deg);  
+                -moz-transform: rotate3d(0, 1, 1, 45deg);  
+                -o-transform: rotate3d(0, 1, 1, 45deg);  
+                -webkit-transform: rotate3d(0, 1, 1, 45deg);  
+            } 
+            </style>
+    </head>
+    <body>
+        <div>Original element</div>
+        <div id="div2">Transformed element</div>
+    </body>
+</html>

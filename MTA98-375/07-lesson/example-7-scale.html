@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>2D Scale Example</title>
+        <style type="text/css">
+            div{
+                padding: 10px;
+                background: limegreen;
+                width: 100px;
+                height: 50px;
+                color: #fff;
+                font-family: sans-serif;
+                font-size: xx-large;
+            }
+            div#div2{
+                margin: 200px;
+                transform: scale(2,4);
+                -ms-transform: scale(2,4);      /*IE*/
+                -moz-transform: scale(2,4);     /*Mozilla/Firefox*/
+                -webkit-transform: scale(2,4);  /*Safari/Chrome*/
+                -o-transform: scale(2,4);       /*Opera*/
+            }
+        </style>
+    </head>
+    <body>
+        <div>Original element</div>
+        <div id="div2">Scaled element</div>
+    </body>
+</html>

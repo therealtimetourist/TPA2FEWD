@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Canvas Example 1</title>
+        <script> 
+            function f1() { 
+                var canvas =  
+                document.getElementById("smlRectangle"); 
+                context = canvas.getContext("2d"); 
+                context.fillStyle = "blue"; // replace this with the code below for example 2 
+                //context.rotate(20*Math. PI/180);    // add for example 3
+                context.fillRect(10, 20, 200, 100); 
+                //var grd=context.createLinearGradient(0,0,150,0); 
+                //grd.addColorStop(0.3,"coral"); 
+                //grd.addColorStop(0.7,"khaki"); 
+                //context.fillStyle=grd; 
+            } 
+        </script> 
+    </head>
+    <body onload = "f1();"> 
+        <canvas id="smlRectangle" height='300' width='500'></canvas> 
+    </body> 
+</html>
+
