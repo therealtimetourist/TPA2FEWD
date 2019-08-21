@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Example 4 - JavaScript accesses data</title>
+        <script type = "text/javascript">
+            function init() {
+                var paragraph_object = document.getElementById('paragraph');     
+                message = "Notice that the title of this page is '" + document.title + "'.";     
+                paragraph_object.innerHTML = message; 
+            }     
+        </script> 
+    </head>
+    <body onload = "init();">
+        <h1>JavaScript accesses data</h1> <p id = "paragraph"></p>         
+    </body>
+</html>

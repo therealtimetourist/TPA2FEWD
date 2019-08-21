@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Example 6 - Accessing A Local File</title>
+        <script type = "text/javascript">
+            function acknowledge(file_handle) {     
+                var size = file_handle.size;     
+                var fname = file_handle.name;     
+                var message = "You have chosen the file '" + fname + "'.  This appears to be a recognizable image, totaling " + size + " bytes in size.";     
+                alert(message); 
+            }
+            
+            function complain(fname) {     
+                var message = "The file named '" + fname + "' does not appear to have an acceptable extension.";     
+                alert(message); 
+            }
+            
+            function handle_file_selection(item) {     
+                var f = item.files[0];     
+                var fname = f.name;     
+                var last_index = fname.lastIndexOf('.');     
+                
+                if (last_index == -1) {         
+                    complain(fname);         
+                    return;     
+                }     
+                
+                var ext = fname.substr(last_index + 1);     
+                
+                if (ext.toLowerCase() in {
+                    'gif': '',
+                    'jpg': '',
+                    'png': '',
+                    'tif': ''
+                }) {         
+                    acknowledge(f);     
+                } 
+                else {         
+                    complain(fname);     
+                } 
+            }
+        </script> 
+    </head>
+    <body>
+        <h1>JavaScript accesses local files</h1>
+        <input type = 'file' onchange = 'handle_file_selection(this);' /> 
+    </body>
+</html>

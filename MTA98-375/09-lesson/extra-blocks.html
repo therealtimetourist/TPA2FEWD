@@ -1,0 +1,82 @@
+<!doctype html>
+<html>
+    <head> 
+        <title>Blocks</title>
+        <script type = "text/javascript">
+            // This page is “for play”—it just places blocks of 
+            // color on the screen with a bit of randomization, 
+            // to achieve mildly interesting visual effects. 
+            // Recursion is used in a couple of distinct ways 
+            // below:  place_blocks() calls draw_spiral(), and 
+            // draw_spiral() calls either place_blocks() or  
+            // draw_spiral(), depending on how much of a spiral 
+            // has been most recently drawn.
+
+            function init() {
+                var canvas = document.getElementById("drawing_area");
+                dctx = canvas.getContext('2d');
+                place_blocks(); 
+            }
+            
+            function draw_spiral() {
+                // Once a block moves outside the drawing       
+                // area, stop the current spiral, and create       
+                // a new one.     
+                if (x > 500 || y > 500 || x < 0 || y < 0) {         
+                    place_blocks();     
+                }     
+                ratio = 1.6;     
+                newx = x;     
+                newy = y;     
+                dx = size;     
+                dy = size;       
+                
+                // Each block is turned 90 degrees away       
+                // from the last one.     
+                switch (direction) {         
+                    case "up":             
+                    dy = -size;             
+                    newy += dy;             
+                    direction = "left";             
+                    break;         
+                    case "left":             
+                    dx = -size;             
+                    dy = -size;             
+                    newx += dx;             
+                    direction = "down";             
+                    break;         
+                    case "down":             
+                    dx = -size;             
+                    newy += dy;             
+                    direction = "right";             
+                    break;         
+                    case "right":             
+                    newx += dx;             
+                    direction = "up";             
+                    break;     
+                }     
+                dctx.fillRect(x, y, dx, dy);       
+                // Each successively-drawn block is larger       
+                // than the last.
+                size *= ratio;     
+                x = newx;     
+                y = newy;     
+                setTimeout(draw_spiral, delay); 
+            } 
+            
+            function place_blocks() {     
+                dctx.fillStyle = '#'+Math.floor(Math.random()*16777215).toString(16);     
+                x = 100 + 300 * Math.random();     
+                y = 100 + 300 * Math.random();     
+                delay = 100 + 2000 * Math.random();     
+                size = 3 + 7 * Math.random();     
+                direction = "up";     
+                draw_spiral(); 
+            } 
+        </script> 
+    </head> 
+    <body onload = "init();">
+        <h1>Blocks</h1> 
+        <canvas id = "drawing_area" width = "500" height = "500"></canvas> 
+    </body> 
+</html>

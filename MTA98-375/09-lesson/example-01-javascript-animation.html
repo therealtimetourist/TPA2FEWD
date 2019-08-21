@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Animate With JavaScript Example</title>
+        <script type = "text/javascript">   
+        // Create a “ticker-tape” effect by sliding   
+        // the paragraph of text one pixel to the    
+        // right, over and over, until the right-hand   
+        // limit of 300 pixels is reached.  At that   
+        // point, restart the animation all the way   
+        // to the left. 
+        function move_paragraph() {     
+            next = current + "px";     
+            current += 1;     
+            if (current > 300) {         
+                current = 0;     
+            }      
+            paragraph.style.left = next;       
+            // Pause for 18 milliseconds before        
+            // the next move.     
+            var rate = 18;     
+            setTimeout(move_paragraph, rate); 
+        } 
+        
+        function init() {     
+            paragraph = document.getElementById("original");     
+            paragraph.style.position = "absolute";     
+            current = 0;     
+            move_paragraph(); 
+        } 
+        </script>
+    </head>
+    <body onload = "init();">
+        <h1>Animate with JavaScript</h1> 
+        <p id = "original">Do you see me scrolling across the screen?</p>
+    </body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Example 9 - Using Cookies</title>
+        <script type = "text/javascript">
+            function getCookie(c_name) {     
+                var i,x,y,ARRcookies=document.cookie.split(";");     
+                for (i=0;i<ARRcookies.length;i++) {       
+                    x=ARRcookies[i].substr(0,ARRcookies[i].indexOf("="));       
+                    y=ARRcookies[i].substr(ARRcookies[i].indexOf("=") + 1);       
+                    x=x.replace(/^\s+|\s+$/g,"");       
+                    
+                    if (x==c_name) {         
+                        return unescape(y);         
+                    }       
+                } 
+            } 
+            
+            function init() {     
+                var message;     
+                level_object = document.getElementById("level");     
+                var welcome = document.getElementById("welcome");     
+                var level = getCookie("level");     
+                
+                if (level == null || level == '') {
+                message = "It appears this is your first time to play. You will start at level 1.";        
+                level = 1;     
+                } else {        
+                    message = "When you last played, you reached level " + level +".  You will start there now.";     
+                }     
+                
+                welcome.innerHTML = message;     
+                level_object.value = level; 
+            } 
+            
+            function save_level() {     
+                setCookie("level", level_object.value, 10); 
+            } 
+            
+            function setCookie(c_name,value,exdays) {     
+                var exdate=new Date();     
+                exdate.setDate(exdate.getDate() + exdays);     
+                var c_value=escape(value) + ((exdays==null) ? "" : "; expires="+exdate.toUTCString());     
+                document.cookie=c_name + "=" + c_value; 
+            }
+        </script>
+    </head>
+    <body onload = "init();"> 
+        <h1>Use of cookies</h1> 
+        <p id = "welcome">Welcome.</p> 
+        <form> 
+            You can update your level at any time.  It is currently set at 
+            <input id = "level" type = "number" min = "1" max = "100" oninput = "save_level();" />. 
+        </form> 
+         
+    </body>
+</html>

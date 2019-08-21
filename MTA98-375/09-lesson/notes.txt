@@ -1,0 +1,236 @@
+Creating Animations, Working with Graphics, and Accessing Data Lesson 9
+
+Exam Objective Matrix
+Skills/Concepts MTA Exam Objectives 
+Coding Animations by Using JavaScript 
+Code animations by using JavaScript. (4.3) 
+
+Working with Images, Shapes, and Other Graphics 
+Code animations by using JavaScript. (4.3) 
+
+Sending and Receiving Data Access data access by using JavaScript. (4.4)
+Loading and Saving Files Access data access by using JavaScript. (4.4)
+
+Using JavaScript to Validate User Form Input
+Access data access by using JavaScript. (4.4)
+
+Understanding and Using Cookies
+Access data access by using JavaScript. (4.4)
+
+Understanding and Using LocalStorage
+Access data access by using JavaScript. (4.4)
+
+Animation 
+•Animation is the display of a sequence of static images at a fast enough speed to create the illusion of movement. 
+•Regarding the user interface, animation has to do with changing a display to make it dynamic—not just a one-time change but a seamless one. 
+•JavaScript can produce spectacular animation effects.
+
+Recursion 
+•Recursion is a programming technique in which a function calls itself. 
+•Recursion is a key part of animation. 
+•The most effective way to introduce a “timing element” into JavaScript is to use setTimeout recursively.
+ –Have it invoke another execution of the same function from which the setTimeout() was called.
+ 
+A Simple Animation Example 
+
+A Simple Animation Example (Continued)
+
+A Simple Animation Example (Continued) 
+
+createElement Method 
+•You can use the JavaScript createElement method to display an image when a button is clicked or some other event occurs.
+
+Canvas Element 
+•To draw a canvas object, use:
+ –getElementById() function to find the canvas element
+ –canvas.getContext to create the canvas object 
+ •Then use a variety of methods to draw shapes, include images, and so on.
+ 
+Canvas Example: Analog Clock
+
+Canvas Example: Analog Clock (Continued) 
+
+Sending and Receiving Data 
+•One of the most essential techniques for data transfer involves the XMLHttpRequest API.
+ –Sometimes abbreviated as XHR 
+ • XMLHttpRequest enables you to use JavaScript to pass data in the form of text strings between a client and a server.
+ 
+XMLHttpRequest 
+•General syntax:
+
+XMLHttpRequest 
+•The XMLHttpRequest object creates a call to the server. 
+•The open method specifies the HTTP method for contacting the server and provides the server’s Web address. 
+•The callback function gets a response from the server. 
+• xhr.send(data) sends the data.
+
+Accessing Data Example Accessing Data Example
+
+Parsing 
+•Parsing is a term used to describe analysis of complex information into constituent parts. 
+•Use parsing for extracting information from a data stream of stock quotes and similar tasks. 
+
+Parsing Example
+
+Parsing Example 
+
+JSON 
+•You can also use JSON.parse and JSON.stringify APIs to exchange JavaScript objects with a server.
+
+Loading and Saving Files 
+•JavaScript can access files on a local computer and, using HTML5, validate the file type before loading, which greatly reduces errors.
+
+Access a Local File Example
+
+Access a Local File Example (Continued) 
+
+Access  a Local File Example (Continued) 
+• Application accepts image files but not other formats
+
+Access a Local File Example (Continued) 
+• Application accepts image files but not other formats
+
+AppCache 
+•AppCache saves a copy of Web site files locally, in a structured form. 
+•AppCache is not the same as a browser’s cache. Whereas a browser’s cache saves all Web pages visited, AppCache saves only the files listed in the cache manifest.
+
+AppCache Example 
+
+Data Types 
+• A data type is JavaScript’s interpretation of the kind of data a program can work with. 
+• Data types include:
+ – string
+ – Number
+ – Array
+ –Boolean
+ –Null
+ –Object
+ –undefined
+ 
+User Input Form Validation 
+•As end users enter data in a form, JavaScript can instantly validate entries and suggest alternatives.
+
+Client-side Validation Example
+
+Client-side Validation Example (Continued) 
+
+Cookies 
+•Cookies are small text files that Web sites save to a computer’s hard disk that contain information about the user and his or her browsing preferences. 
+•The content of cookies change as a user revisits a site and selects different items or changes preferences. 
+•In JavaScript, a cookie is a variable. 
+•JavaScript can create and retrieve cookies.
+
+Use Cookies Example 
+
+Local Storage 
+•HTML5’s Local Storage feature has better security and makes programming easier than with cookies.
+ 
+Recap 
+• Animation 
+• Recursion 
+• createElement method 
+• Canvas 
+• Sending and receiving data 
+• XMLHttpRequest API 
+• Accessing a local file 
+• AppCache 
+• Data types 
+• User input form validation/client-side validation 
+• Cookies 
+• Local Storage
+
+Knowledge Assessment 
+Fill in the Blank 
+Complete the following sentences by writing the correct word or words in the blanks provided. 
+
+1. __Animation__ is the display of a sequence of static images at a fast enough speed to create the illusion of movement. 
+
+2. You need to draw a complex diagram as part of an HTML5 display. One way is with the __canvas__ element. 
+
+3.  Before HTML5, the most common way to keep information on the client side of a Web application—that is, on the user’s computer—was with __ cookies__. [Possible alternative answer:  “hidden form variables”.] 
+
+4. __XMLHttpRequest__ enables you to use JavaScript to pass data in the form of text strings, but not objects, between a client and a server. 
+
+5.  __Recursion__ is a programming technique in which a function calls itself. 
+
+6.  __Parsing__ is the label generally used for analysis of complex information into constituent parts. 
+
+7.  The __AppCache__ API saves a copy of your Web site files locally, in a structured form. 
+
+8.  Values in JavaScript appear in special different appearances, called __data types__, which are most often strings and numbers. 
+
+9.  __JSON__ is a subset of JavaScript that enables you to exchange JavaScript objects with a server. 
+
+10. __localStorage__ is an alternative to cookies. 
+
+Multiple Choice 
+Circle the letter that corresponds to the best answer. 
+
+1. Which of the following is the most common way to code JavaScript with a delayed effect? 
+a. sleep() 
+b. delay() 
+c. wait() 
+*d. setTimeout() 
+
+2. JavaScript can display different types of graphics, from JPG and PNG files to shapes like boxes and circles. One method you can use to display graphics using JavaScript is: 
+*a. createElement 
+b. move_paragraph 
+c. JSON 
+d. display 
+
+3. What are the two primary constructs used to draw a canvas object?
+*a. getElementById() 
+b. getCanvasContext 
+c. getElementByCanvas() 
+*d. canvas.getContext 
+
+4. Sending and receiving data in JavaScript requires a dynamic Web server and: 
+a. client-side validation 
+*b. server-side programming 
+c. CSS 
+d. none of the above 
+
+5. The canvas element builds in which set of methods? 
+a. drawRect(), outlineRect(), eraseRect() 
+*b. fillRect(), strokeRect(), clearRect() 
+c. beginPath(), fillPath(), endPath() 
+d. beginPath(), fillPath(), closePath() 
+
+6. Which JSON API converts a JavaScript object to string data for exchange with a server? 
+a. JSON.parsify 
+b. XMLHttpRequest 
+*c. JSON.stringify 
+d. getObjectString 
+
+7. How does AppCache differ from browser cache? 
+a. AppCache saves copies of Web pages. 
+b. You first have to visit a Web page for it to be included in the cache. 
+*c. AppCache saves only those files listed in the cache manifest. 
+d. AppCache and browser cache are the same thing. 
+
+8. Which of the following is not a data type used by JavaScript? 
+*a. composite 
+b. string 
+c. number 
+d. Boolean 
+
+9. Which of the following poses a threat to data privacy? 
+a. AppCache 
+b. localStorage 
+*c. cookies 
+d. animation 
+
+10. Which API enables you to work on remote files offline? 
+a. XMLHttpRequest 
+*b. AppCache 
+c. JSON.parse
+d. JSON.stringify
+ 
+True / False 
+Circle T if the statement is true or F if the statement is false. 
+
+F 1. JavaScript doesn’t allow recursion. 
+F 2. You use XMLHttpRequest to create animations. 
+T 3. It is possible to write JavaScript code in such a way that it executes before all images are loaded. 
+T 4. You can use localStorage to store a user’s personal data. 
+T 5. A common technique in JavaScript animation is to use setTimeout recursively. 

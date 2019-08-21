@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Animate With JavaScript Example</title>
+        <script type = "text/javascript">
+        function show_image(src, width, height, alt) { 
+            var img = document.createElement("img"); 
+            img.src = src; 
+            img.width = width; 
+            img.height = height; 
+            img.alt = alt; 
+        
+            // Adds it to the <body> tag 
+            document.body.appendChild(img); 
+        }
+        </script>
+    </head>
+    <body>
+        <h1>createElement Example</h1> 
+        
+        <button onclick="show_image ('img/logo.png', 565, 110, 'Logo');">Display logo</button>
+    </body>
+</html>
