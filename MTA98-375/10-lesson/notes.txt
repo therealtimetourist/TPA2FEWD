@@ -1,0 +1,283 @@
+JavaScript Coding for the Touch Interface, Device and Operating System Resources, and More Lesson 10
+
+Exam Objective Matrix
+Skills/Concepts MTA Exam Objectives 
+
+Responding to the Touch Interface 
+Respond to the touch interface. (4.5) 
+
+Coding Additional HTML5 APIs 
+Code additional HTML5 APIs. (4.6)
+
+Accessing Device and Operating System Resources
+Access device and operating system resources. (4.7)
+
+Touch Screens 
+•Resistive: Made up of several layers; topmost layer flexes when pressed; sensors detect the pressure 
+•Capacitive: Uses electrodes to sense objects touching the screen; object must have conductive properties
+ –A finger works but something like a stylus does not
+ 
+Overview of Touch Gestures
+Gesture Mouse Equivalent Description 
+Tap Left-click Tap a finger on the screen
+Double tap Left double-click Quickly tap a finger twice on the screen
+Two-finger tap N/A Tap two fingers on the screen simultaneously 
+Press and tap Right-click Press and hold one finger while tapping another Press and hold Right-click Press and hold a finger on the screen, then release
+
+Overview of Touch Gestures (Continued)
+Gesture Mouse Equivalent Description 
+Selection/drag Mouse drag (selection) 
+Drag a finger to the left or right Panning with inertia Scrolling Press and hold a finger on the screen and then drag the finger 
+Flick Move back or forward Pan up or down 
+Press a finger on the screen, move it in any direction, and then lift the finger to scroll Rotate N/A Move two fingers over an object on the screen in a circular motion 
+Zoom CTRL + mouse wheel forward or backward Pinch an object inwards or outwards
+
+Primary JavaScript Touch Events 
+• Every new finger touch triggers a touchstart event. 
+• When a finger moves around the surface of the screen, a touchmove event occurs, which tracks the finger movement. 
+• Lifting the finger from the screen triggers a touchend event. 
+• The touchcancel event is triggered when the device launches another application.
+
+Touch Object and Touchlist 
+•In JavaScript, the touch objectdetects input from touch-enabled devices. You reference touch objects in the touchlist,which includes all of the points of contact with a touch screen. 
+•A single tap has one entry in the touchlist, whereas a three-finger gesture would have a total of three entries.
+
+Touchlists 
+• touches: A list of all touch points currently in contact with the screen 
+• targetTouches: A list of touch points currently in contact with the screen and whose touchstart event occurred within the same node (inside the same target element as the current target element) 
+• changedTouches: A list of touch points that caused the current event to be fired; for example, in a touchend event, this is the finger that was removed
+
+addEventListener method 
+•Used to attach an event handler to an HTML element –Can be a div, link, or anything you want. 
+•General syntax: object.addEventListener(event, eventListenerFunction);
+
+startup() Function Example
+
+handleStart Function Example 
+
+Gesture Events 
+•Every new two-finger gesture triggers a gesturestart event. 
+•When both fingers move around the screen, a gesturechange event occurs. 
+•Lifting both fingers from the screen triggers a gestureend event.
+
+Scale and Rotation Properties 
+• scale: Indicates the amount of two-finger pinch zooming that occurred 
+• rotation: Indicates the amount of twofinger rotation that occurred
+
+WHATWG 
+•Web Hypertext Application Technology Working Group (WHATWG) 
+•Formed by Apple, the Mozilla Foundation, and Opera Software to define and document the HTML5 specification 
+•http://developers.whatwg.org/
+
+Geolocation API 
+•Defines an interface that provides a device’s location, usually using latitude and longitude coordinates 
+•API exposes the latitude and longitude to JavaScript in a Web page using the geolocation object
+
+Geolocation Methods 
+• getCurrentPosition: Gets the device’s current geographic position 
+• watchPosition: Watches the device’s position as it changes over time and generates an event if a change occurs –Calling clearWatch stops the watch
+
+Example of a Call to getCurrentPosition 
+
+Geodetic and Civic Data 
+•You can present location data to users in two ways:
+ –Geodetic data provides raw location data, such as longitude and latitude, or meters.
+ –Civic data is location data that’s more easily understood by humans, such as a map or an address like 637 Park Street.
+
+Web Workers 
+• Web Workers are scripts that run in the background, performing calculations or other actions that allow for a more responsive user interface. 
+• Uses:
+ – Fetch real-time data like stock updates
+ – Make network requests
+ – Access local storage while the main HTML document responds to the user input like tapping, scrolling, and typing.
+ 
+Web Workers (Continued) 
+• Web Worker objects run in isolated threads—they do not act directly on the main HTML document or the DOM. 
+• You don’t use getElementById in your script. (You can use setTimeout, setInterval, and XMLHttpRequest.) 
+• Instead, Web Workers pass information through messages, executing code from a JavaScript file separate from the main HTML document.
+
+Web Workers Example 
+• Main HTML document:
+• doWork.js file:
+
+WebSockets 
+•WebSocketsis an API that offers full-duplex communication through a single socket over the Internet. 
+•Uses:
+ –Real-time Web applications like chat, multiplayer online gaming, and stock quotes
+ 
+WebSockets (Continued) 
+•Primary events associated with WebSocket communications:
+ –onopen: When a socket opens –onmessage: When a message has been received from the Web server
+ –onclose: When a socket closes
+ 
+WebSockets (Continued) 
+•The JavaScript that opens a WebSocket connection is: var host = 'ws://example.com'; 
+•ws replaces http in the URL 
+•wss for secure WebSocket connections, just like https for secure HTTP connections
+
+WebSockets (Continued) 
+• Test an initialized Web connection using one of these methods
+ – Opens an alert box: socket.onopen = function(){ alert("Socket open"); }
+ – Displays a message: socket.onopen = function (openEvent) { document.getElementById("serverStatus"). innerHTML = 'Socket open'; };
+ 
+WebSockets (Continued) 
+•The code for sending a text-based message: socket.send('message');
+•A Blob is a data type that can store binary data, like images or multimedia files. To send a file as a Blob: 
+var file = document.querySelector('input[type="fi le"]').files[0]; socket.send(file);
+
+WebSockets (Continued) 
+•To receive messages from the server, you could use the onmessage callback: socket.onmessage = function(msg){ alert(msg); //Received! } 
+•To close a connection, use the onclose event handler: socket.onclose = function() { alert("Connection closed."); };
+
+File API 
+•Allows a browser or application to upload files from local storage to a remote server without the need for a plug-in
+
+File API Interfaces 
+• File: Includes read-only informational attributes about an individual file, such as its name and media type, and reads in the file as a URL 
+• FileList: An array-like sequence of File objects; includes dragging a folder of files from local storage 
+• Blob: Provides access to raw binary data 
+• FileReader: Provides methods to read and display a file
+
+File API Interfaces 
+•Use the input type="file" element to get the list of selected File objects as a FileList
+
+Web Storage API 
+• Provides a client-side method for saving session information locally within the browser or device memory 
+• localStorage method allows users to save larger amounts of data from session to session (persistent data) 
+• sessionStorage method keeps data only for one session (until the browser is closed) 
+• Data stored in key/value pairs for both types of Web storage
+
+Web Storage API (Continued) 
+• sessionStorage is isolated to a specific window or browser tab. 
+• Stores temporary data during an HTTP session that occurs in a single window or tab 
+• Multiple windows or tabs can maintain their own session data 
+• Ideal for user with multiple open browser tabs, can have different shopping carts open in each tab (for example)
+
+Platform Independence 
+•Describes an application that can run on different desktop and mobile device operating systems, such as Microsoft Windows, Internet Explorer, Windows Phone, Mac OS X, Android, iOS, and Blackberry OS
+
+Global Positioning System (GPS) 
+•Hardware, which is usually a chip or circuit board, is a receiver that communicates with satellites to provide a device’s precise location in longitude and latitude coordinates 
+•Found in most modern phones and laptops with WiFi and/or cellular broadband 
+•Geolocation API works with the GPS chip to gather raw geolocation data
+
+Accelerometer 
+•A device that measures acceleration 
+•Accelerometer sensor detects forces applied to the device, such as movement (up, down, sideways) and gravity 
+•Specific APIs retrieve raw motion data from Accelerometer sensors, and then the Motion API combines the data from those sensors and crunches the numbers that result in easy-to-use values
+
+Accelerometer (Continued) 
+• devicemotion event provides the acceleration of the device, in Cartesian coordinates, and the rotation rate 
+• JavaScript that receives devicemotion events: window.addEventListener("devicemotion", function(event) { // Process event.acceleration, event.accelerationIncludingGravity, // event.rotationRate and event.interval }, true);
+
+Camera 
+•W3C HTML Media Capture specification uses a capture attribute with the input element to capture data from cameras, camcorders, webcams, microphones, and so on
+•Generic code that uploads an image from a device’s camera: <input type="file" accept="image/*" capture="camera" id="capture">
+
+Recap 
+• Touch interface 
+• Gestures 
+• Capturing geolocation data 
+• Web Workers 
+• WebSockets 
+• File API 
+• Accessing in-memory resources 
+• GPS 
+• Accelerometer 
+• Camera 
+
+Knowledge Assessment 
+Fill in the Blank 
+Complete the following sentences by writing the correct word or words in the blanks provided. 
+
+1. The action an application takes in response to a gesture is called a __touch__ event. 
+
+2. __Geodetic__ data provides raw location data, such as longitude and latitude, or meters. 
+
+3. __Web Workers__ are APIs that allow scripts to run in the background as parallel threads. 
+
+4. The __WebSocket__ API offers full-duplex, two-way communication through a single socket over the Internet. 
+
+5. The __File__ API allows a browser or application to upload files from local storage  to a remote server without the need for a plug-in. 
+
+6. A program or interface that runs software that produces similar results on a wide variety of hardware is also called __device-independent__. 
+
+7. An __accelerometer__ is a device that measures acceleration, which is a change in speed over a period of time. 
+
+8. A __resistive__ touch screen is made up of several layers, the topmost of which flexes when pressed and pushes into the layer underneath. Sensors detect the pressure, which is how the system knows which part of the screen has been pressed. 
+
+9. A __Blob__ is a data type that can store binary data, like images or multimedia files. 
+
+10. Comet and similar “push” technologies introduced __polling__, in which a browser would contact the Web server periodically (sometimes constantly) to see if new information was available to present to the user.
+ 
+Multiple Choice 
+Circle the letter that corresponds to the best answer. 
+
+1. Which type of touch screen requires conductive properties? 
+*a. Capacitive 
+b. Resistive 
+c. Electronic 
+d. none of the above 
+
+2. In JavaScript, which of the following contains a reference to all points of contact with a touch screen? 
+a. Touch object 
+b. Identifier 
+*c. Touchlist 
+d. Manifest 
+
+3. Which API defines an interface that provides a device’s location, usually using latitude and longitude coordinates? 
+a. WebSocket 
+*b. Geolocation 
+c. Web Workers 
+d. File 
+
+4. Web Workers do not use which of the following? 
+a. setTimeout 
+b. setInterval 
+c. XMLHttpRequest 
+*d. getElementById 
+
+5. Which of the following are good examples of Web applications that benefit from WebSockets? (Choose all that apply.) 
+*a. Chat 
+b. Address book 
+*c. Multiplayer online gaming 
+*d. Stock quotes 
+
+6. Which API enables you to upload images and immediately display thumbnails in HTML documents? 
+a. WebSocket 
+b. Geolocation 
+c. Web Workers 
+*d. File 
+
+7. Which API uses ws rather than http when referencing URLs? 
+*a. WebSocket 
+b. Geolocation 
+c. Web Workers 
+d. File 
+
+8. Which method allows users to save relatively large amounts of data that persists from browser session to browser session? 
+*a. localStorage 
+b. sessionStorage 
+c. postMessage 
+d. addEventListener 
+
+9. Which method accesses a device’s local camera and microphone stream? 
+*a. getUserMedia 
+b. sessionStorage 
+c. addEventListener 
+d. getCameraSound 
+
+10. Which mobile device sensor detects the force of gravity along with any forces resulting from the movement of the device? 
+a. GPS
+b. Compass 
+*c. Accelerometer 
+d. Gyroscope 
+
+True / False 
+Circle T if the statement is true or F if the statement is false. 
+
+F 1. The W3C was formed by Apple, the Mozilla Foundation, and Opera Software to define and document the HTML5 specification. 
+T 2. In JavaScript, the touch object detects input from touch-enabled devices. 
+T 3. Civic data is location data that’s more easily understood by humans, such as a map or an address like 637 Park Street. 
+T 4. Developers test their applications and users run the apps in the WinRT environment. 
+F 5. The press and tap gesture is an equivalent to a left-mouse click.

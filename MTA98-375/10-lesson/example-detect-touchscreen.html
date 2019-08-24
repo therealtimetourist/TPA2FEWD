@@ -1,0 +1,38 @@
+<!doctype html> 
+<html>
+    <head>
+        <title>Detect Touch Screen</title>
+        <meta charset="utf-8" />
+        <style type="text/css">       
+            #canvas{background-color: dodgerblue;}
+        </style>
+        <script type="text/javascript">
+            document.addEventListener("DOMContentLoaded", init, false);
+            
+            function init() {             
+                var canvas = document.getElementById("canvas"); 
+                if ("ontouchstart" in document.documentElement) {                 
+                    canvas.addEventListener("touchstart", detect, false);             
+                }             
+                else {                 
+                    canvas.addEventListener("mousedown", detect, false);             
+                }         
+            } 
+ 
+            function detect() {             
+                if ("ontouchstart" in document.documentElement) {                 
+                    alert("Touch screen device detected!");             
+                }             
+                else {                 
+                    alert("No touch screen device detected.");             
+                }         
+            }
+        </script>
+    </head> 
+ 
+    <body>
+        <canvas id="canvas" width="100" height="100"></canvas>
+        <br />
+        <p>Click the box to start touch screen detection.</p>   
+    </body> 
+</html>

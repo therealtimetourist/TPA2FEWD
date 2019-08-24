@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>WebSocket to Test Browser Compatibility</title>
+        <script type="text/javascript">     
+            function WebSocketTest() {         
+                if ("WebSocket" in window) {             
+                    alert("Your browser supports WebSockets.");             
+                    // Open a WebSocket             
+                    var socket = new WebSocket("ws://localhost:9998/echo");             
+                    socket.onopen = function () {                 
+                        // Connected, send data                 
+                        socket.send("Connected");                 
+                        alert("Connected.");             
+                    };             
+                    socket.onmessage = function (e) {                 
+                        var received_msg = e.data;                 
+                        alert("Message received.");             
+                    };
+                    socket.onclose = function () {                 
+                        // WebSocket closed                 
+                        alert("Connection closed.");             
+                    };         
+                } else {             
+                    // Browser doesn't support WebSockets             
+                    alert("Your browser does not support WebSockets.");         
+                }     
+            } 
+        </script>
+    </head>
+    <body> 
+        <div>    
+            <a href="javascript:WebSocketTest()">Click to run WebSocket demo</a> 
+        </div> 
+    </body>
+</html>

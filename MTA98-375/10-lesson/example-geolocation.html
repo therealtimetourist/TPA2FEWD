@@ -1,0 +1,40 @@
+<!doctype html>  
+<html>
+    <head>
+        <title>Geolocation Example</title>    
+        <meta charset="utf-8" />  
+        <script>      
+            var messageDiv = document.getElementById('message');
+            
+            function initLocation() {
+                var geolocation = navigator.geolocation;
+                
+                if (geolocation) {
+                    try {
+                        navigator.geolocation.getCurrentPosition( successCallback, errorCallback );
+                    } catch (err) {
+                        messageDiv.innerHTML = 'Error';
+                    }
+                } else {
+                    messageDiv.innerHTML = 'Your browser does not support geolocation.';
+                } 
+            }
+
+            function successCallback(location) {
+                message.innerHTML = "<p>Latitude: " + location.coords.latitude + "</p>";
+                message.innerHTML += "<p>Longitude: " + location.coords.longitude + "</p>";
+                message.innerHTML += "<p><a href='https://www.latlong.net/c/?lat=" + 
+                    location.coords.latitude + "&long=" + location.coords.longitude + 
+                    "'>Hey, I'm here!</a></p>";
+            }
+            
+            function errorCallback() {
+                messageDiv.innerHTML = 'There was an error looking up your position';
+            }
+        </script> 
+    </head>  
+    
+    <body onload="initLocation()">
+        <div id="message">Looking Up Location</div>  
+    </body>  
+</html>
